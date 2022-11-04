@@ -22,9 +22,9 @@ public class LoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+       
         LoginBean loginBean = new LoginBean();
         loginBean.setUsername(username);
         loginBean.setPassword(password);
@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
             if (loginDao.validate(loginBean)) {
                 HttpSession session = request.getSession();
                 session.setAttribute("username",username);
-                response.sendRedirect("mainuserpage.jsp");
+                response.sendRedirect("DogServlet?action=list");
             } else {
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);

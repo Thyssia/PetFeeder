@@ -4,18 +4,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>First Landing Page</title>
+<title>Add dog Page</title>
 </head>
 <body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+			<div>
+				<br>
+				<br>
+				<br>
+            </div>
+        </nav>
+    </header>
 <div align="center">
 <%
 HttpSession session = request.getSession(false);
 String user = (String) session.getAttribute("username");
 
 %>
-<h1>Welcome <%= user %> to Pet Feeder!</h1>
-<h2>Please login</h2>
-<form action="<%= request.getContextPath() %>/DogServlet" method="post">
+<h1>Let's add a new dog <%= user %></h1>
+<form action="<%= request.getContextPath() %>/DogServlet?action=insert" method="post">
   Dog name <input type="text" name="dogName" /><br>
   <br> Dog type 
        <select name="dogType" >

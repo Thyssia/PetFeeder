@@ -7,6 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+			<div>
+				<br>
+				<br>
+				<br>
+            </div>
+        </nav>
+    </header>
 <div align="center">
   <h1>Pet Feeder Registration Form</h1>
   <form action="<%= request.getContextPath() %>/register" method="post">

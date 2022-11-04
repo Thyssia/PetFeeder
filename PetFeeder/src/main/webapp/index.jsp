@@ -7,6 +7,15 @@
 <title>First Landing Page</title>
 </head>
 <body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+			<div>
+				<br>
+				<br>
+				<br>
+            </div>
+        </nav>
+    </header>
 <div align="center">
 <h1>Welcome to Pet Feeder!</h1>
 <h2>Please login</h2>
