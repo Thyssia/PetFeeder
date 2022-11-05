@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/register")
+//@WebServlet("/register")
 public class UserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserDao userDao;
@@ -33,7 +33,6 @@ public class UserServlet extends HttpServlet {
         user.setUsername(username);
         user.setPassword(password);
         
-
         try {
             userDao.registerUser(user);
         } catch (Exception e) {

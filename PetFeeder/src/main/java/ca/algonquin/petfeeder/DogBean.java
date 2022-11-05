@@ -47,5 +47,4 @@ public class DogBean implements Serializable {
     public void setDogOwner(String dogOwner) {
         this.dogOwner = dogOwner;
     }
-        
 }

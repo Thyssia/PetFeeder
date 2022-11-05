@@ -20,10 +20,15 @@
 <h1>Welcome to Pet Feeder!</h1>
 <h2>Please login</h2>
 <form action="<%= request.getContextPath() %>/LoginServlet" method="post">
-  Username <input type="text" name="username" /><br><br> Password <input
-   type="password" name="password" /><br> <br><input type="submit" value="Submit" />
- </form>
- <p>
+  Username <input type="text" name="username" />
+  <br>
+  <br>
+  Password <input type="password" name="password" />
+  <br>
+  <br>
+  <input type="submit" value="Submit" />
+</form>
+<p>
   First time here?   <a href="userregister.jsp">Register Here</a>
 </div>
 </body>

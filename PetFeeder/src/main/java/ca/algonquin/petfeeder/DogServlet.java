@@ -11,19 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/DogServlet")
+//@WebServlet("/DogServlet")
 public class DogServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private DogDao dogDao;
-
+	private FoodBagDao foodDao;
     public void init() {
         dogDao = new DogDao();
+        foodDao = new FoodBagDao();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
     	String action = request.getServletPath();
-		System.out.println("Got action in post: " + action);
+			System.out.println("Got action in post: " + action);
     	doGet(request, response);
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -64,6 +65,8 @@ public class DogServlet extends HttpServlet {
     		System.out.println("getting: "+ request.getSession().getAttribute("username").toString());
     		List < DogBean > listDog = dogDao.selectAllDogs(request.getSession().getAttribute("username").toString());
     	    request.setAttribute("listDog", listDog);
+    	    List < FoodBagBean > listBag = foodDao.selectAllBag(request.getSession().getAttribute("username").toString());
+    	    request.setAttribute("listBag", listBag);
     	    RequestDispatcher dispatcher = request.getRequestDispatcher("PetFeederMain.jsp");
     	    dispatcher.forward(request, response);
     	}
@@ -81,7 +84,6 @@ public class DogServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("EditDog.jsp");
             request.setAttribute("dog", existingDog);
             dispatcher.forward(request, response);
-
         }
 
     private void insertDog(HttpServletRequest request, HttpServletResponse response)
@@ -111,7 +113,6 @@ public class DogServlet extends HttpServlet {
             int id = Integer.parseInt(request.getParameter("id"));
             dogDao.deleteDog(id);
             response.sendRedirect("DogServlet?action=list");
-
     	}
 }
  
