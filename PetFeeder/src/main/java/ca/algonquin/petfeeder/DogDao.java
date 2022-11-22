@@ -15,13 +15,13 @@ public class DogDao {
 	private static final String jdbcPassword = "root";
 	
     private static final String INSERT_DOGS_SQL = "INSERT INTO dog" +
-         "  (dog_name, dog_type, dog_owner) VALUES " +
-         " (?, ?, ?);";
+         "  (dog_name, dog_type, dog_daily_amount, dog_owner) VALUES " +
+         " (?, ?, ?, ?);";
         
-    private static final String SELECT_DOG_BY_ID = "select id, dog_name, dog_type, dog_owner from dog where id =?";
-    private static final String SELECT_ALL_DOG = "select * from dog where dog_owner = ?; ";
+    private static final String SELECT_DOG_BY_ID = "select id, dog_name, dog_type, dog_daily_amount, dog_owner from dog where id =?;";
+    private static final String SELECT_ALL_DOG = "select * from dog where dog_owner = ?;";
     private static final String DELETE_DOG_SQL = "delete from dog where id = ?;";
-    private static final String UPDATE_DOG_SQL = "update dog set dog_name = ?, dog_type= ? where id = ?;";
+    private static final String UPDATE_DOG_SQL = "update dog set dog_name = ?, dog_type= ?, dog_daily_amount= ? where id = ?;";
 
     int result = 0;
         
@@ -49,7 +49,8 @@ public class DogDao {
         	PreparedStatement preparedStatement = connection.prepareStatement(INSERT_DOGS_SQL)) {
         	preparedStatement.setString(1, dog.getDogName());
         	preparedStatement.setString(2, dog.getDogType());
-        	preparedStatement.setString(3, dog.getDogOwner());
+        	preparedStatement.setInt(3, dog.getDogDailyAmount());
+        	preparedStatement.setString(4, dog.getDogOwner());
         	System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
             
@@ -72,8 +73,9 @@ public class DogDao {
             while (rs.next()) {
             	String DogName = rs.getString("dog_name");
                 String DogType = rs.getString("dog_type");
+                int DogDailyAmount = rs.getInt("dog_daily_amount");
                 String DogOwner = rs.getString("dog_owner");
-                dog = new DogBean(id, DogName, DogType, DogOwner);
+                dog = new DogBean(id, DogName, DogType, DogDailyAmount, DogOwner);
             }
        } catch (SQLException e) {
     	   printSQLException(e);
@@ -99,8 +101,9 @@ public class DogDao {
             	int id = rs.getInt("id");
                 String DogName = rs.getString("dog_name");
                 String DogType = rs.getString("dog_type");
+                int DogDailyAmount = rs.getInt("dog_daily_amount");
                 String DogOwner = rs.getString("dog_owner");
-                dogs.add(new DogBean(id, DogName, DogType, DogOwner));
+                dogs.add(new DogBean(id, DogName, DogType, DogDailyAmount, DogOwner));
                 System.out.println("Added dog row: " + id);
             }
             } catch (SQLException e) {
@@ -123,8 +126,8 @@ public class DogDao {
         try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_DOG_SQL);) {
         	statement.setString(1, dog.getDogName());
             statement.setString(2, dog.getDogType());
-           // statement.setString(3, dog.getDogOwner());
-            statement.setInt(3, dog.getId());
+            statement.setInt(3, dog.getDogDailyAmount());
+            statement.setInt(4, dog.getId());
 
             rowUpdated = statement.executeUpdate() > 0;
         }

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class FoodBagServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private FoodBagDao foodbagDao;
-       
+	private final int cupsPerKilo = 9;
     public void init() {
     	foodbagDao = new FoodBagDao();
     }
@@ -25,7 +25,8 @@ public class FoodBagServlet extends HttpServlet {
     		throws ServletException, IOException {
 		
     	String fbBrand = request.getParameter("food_bag_brand");
-    	String fbSize = request.getParameter("food_bag_size");
+    	int fbSize = Integer.parseInt(request.getParameter("food_bag_size"));
+    	int sCups = Integer.parseInt(request.getParameter("size_cups"));
     	Date dayOpened = new Date();
 		try {
 			dayOpened = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("day_opened"));
@@ -34,11 +35,11 @@ public class FoodBagServlet extends HttpServlet {
 			e1.printStackTrace();
 		}
     	String Owner = request.getParameter("owner");
-    	int fbs = Integer.parseInt(fbSize);
-    	
+       	
     	FoodBagBean foodbag = new FoodBagBean();
         foodbag.setFbBrand(fbBrand);
-        foodbag.setFbSize(fbs);
+        foodbag.setFbSize(fbSize);
+        foodbag.setSCups((fbSize * cupsPerKilo));
         foodbag.setDayOpened(dayOpened);
         foodbag.setOwner(Owner);
         

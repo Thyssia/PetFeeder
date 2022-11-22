@@ -8,16 +8,18 @@ public class FoodBagBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String fbBrand;
 	private int fbSize;
+	private int sCups;
 	private Date dayOpened;
 	private String Owner;
 	private int daysUntilEmpty;
 	private int id;
 	
 	public FoodBagBean() {};
-    public FoodBagBean(int id, String fbBrand, int fbSize, Date dayOpened, String Owner) {
+    public FoodBagBean(int id, String fbBrand, int fbSize, int sCups, Date dayOpened, String Owner) {
     	this.id = id;
     	this.fbBrand = fbBrand;
     	this.fbSize = fbSize;
+    	this.sCups = sCups;
     	this.Owner = Owner;
     	this.dayOpened = dayOpened;
     }
@@ -41,6 +43,16 @@ public class FoodBagBean implements Serializable {
 
 	public void setFbSize(int fbSize) {
 		this.fbSize = fbSize;
+		
+	}
+	
+	public int getSCups() {
+		return sCups;
+	}
+
+	public void setSCups(int sCups) {
+		this.sCups = (this.fbSize * 9);
+	//	this.sCups = sCups;
 	}
 
 	public Date getDayOpened() {

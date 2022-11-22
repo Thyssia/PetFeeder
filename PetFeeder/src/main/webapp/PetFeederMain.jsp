@@ -24,9 +24,10 @@
 		<%
 			HttpSession session = request.getSession(false);
 			String user = (String) session.getAttribute("username");
+			
 		%>
   		<h1>Welcome back to Pet Feeder <%= user %>.</h1>
-  	   	<br>
+  	   	<h2 style="color: red;"> Your pet's food will end in ${daysUntilEmpty} days.</h2>
     		<div class="row">
                 <!-- <div class="alert alert-success" *ngIf='message'>{{message}} </div> -->
                 <div class="container">
@@ -36,9 +37,10 @@
                     <table style="with: 80%" class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Dog Name</th>
-                                <th>Dog Type</th>
-                                <th>Actions</th>
+                                <th>&nbsp;Dog Name&nbsp;</th>
+                                <th>&nbsp;Dog Type&nbsp;</th>
+                                <th>&nbsp;Dog Daily Intake (cups)&nbsp;</th>
+                                <th>&nbsp;Actions&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,6 +52,9 @@
                                     </td>
                                     <td>
                                         <c:out value="${dog.dogType}" />
+                                    </td>
+                                    <td style="text-align:center;">
+                                    	<c:out value="${dog.dogDailyAmount}" />
                                     </td>
                                     <td><a href="?action=edit&id=<c:out value='${dog.id}' />
                                     	">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; 
@@ -76,24 +81,30 @@
                     <table style="with: 80%" class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Food Bag Brand</th>
-                                <th>Food Bag Size</th>
-                                <th>Opened Date</th>
+                                <th>&nbsp;Food Bag Brand&nbsp;</th>
+                                <th>&nbsp;Food Bag Size (kg)&nbsp;</th>
+                                <th>&nbsp;Bag Size (cups)&nbsp;</th>
+                                <th>&nbsp;Opened Date&nbsp;</th>
+                        
                             </tr>
                         </thead>
                         <tbody>
                             <!--   for (Todo todo: todos) {  -->
                             <c:forEach var="foodbag" items="${listBag}">
                                 <tr>
-                                    <td>
+                                    <td style="text-align:center;">
                                         <c:out value="${foodbag.fbBrand}" />
                                     </td>
-                                    <td>
+                                    <td style="text-align:center;">
                                         <c:out value="${foodbag.fbSize}" />
                                     </td>
-                                    <td>
+                                    <td style="text-align:center;">
+                                        <c:out value="${foodbag.SCups}" />
+                                    </td>
+                                    <td style="text-align:center;">
                                         <c:out value="${foodbag.dayOpened}" />
                                     </td>
+                                   
                                 </tr>
                             </c:forEach>
                             <!-- } -->

@@ -12,8 +12,8 @@ import java.util.List;
 public class FoodBagDao {
 	private static final String SELECT_ALL_FOOD = "select * from foodbag where owner = ?; ";
 	private static final String INSERT_FOODBAG_SQL = "INSERT INTO foodbag" +
-			" (food_bag_brand, food_bag_size, day_opened, owner) VALUES " +
-				"(?, ?, ?, ?);";
+			" (food_bag_brand, food_bag_size, size_cups, day_opened, owner) VALUES " +
+				"(?, ?, ?, ?, ?);";
 	public int foodBag(FoodBagBean foodbag) throws ClassNotFoundException {
 	 		
 		int result = 0;
@@ -30,8 +30,9 @@ public class FoodBagDao {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_FOODBAG_SQL)) {
             preparedStatement.setString(1, foodbag.getFbBrand());
             preparedStatement.setInt(2, foodbag.getFbSize());
-            preparedStatement.setDate(3, sqlDate);
-            preparedStatement.setString(4, foodbag.getOwner());
+            preparedStatement.setInt(3, foodbag.getSCups());
+            preparedStatement.setDate(4, sqlDate);
+            preparedStatement.setString(5, foodbag.getOwner());
                         
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query
@@ -71,9 +72,10 @@ public class FoodBagDao {
             	int id = rs.getInt("id");
                 String fbBrand = rs.getString("food_bag_brand");
                 int fbSize = rs.getInt("food_bag_size");
+                int sCups = rs.getInt("size_cups");
                 String Owner = rs.getString("owner");
                 Date dayOpened = rs.getDate("day_opened");
-                fb.add(new FoodBagBean(id, fbBrand, fbSize, dayOpened, Owner));
+                fb.add(new FoodBagBean(id, fbBrand, fbSize, sCups, dayOpened, Owner));
                 System.out.println("Added bag row: " + id);
             }
             } catch (SQLException e) {

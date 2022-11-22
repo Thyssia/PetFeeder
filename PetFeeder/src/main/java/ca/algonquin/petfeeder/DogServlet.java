@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,9 +15,14 @@ public class DogServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private DogDao dogDao;
 	private FoodBagDao foodDao;
-    public void init() {
+	private CalculationDao calcDao;
+	private static int SmallDogIntake = 1;
+	private static int MediumDogIntake = 2;
+	private static int LargeDogIntake = 3;
+	public void init() {
         dogDao = new DogDao();
         foodDao = new FoodBagDao();
+        calcDao = new CalculationDao();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -59,14 +63,25 @@ public class DogServlet extends HttpServlet {
     	          throw new ServletException(ex);
     	    }
      }
-
+    private int getDogDailyIntake(String dogType) {
+    	
+    	if (dogType.equalsIgnoreCase("small")) return SmallDogIntake;
+    	else if (dogType.equalsIgnoreCase("medium")) return MediumDogIntake;
+    	else if (dogType.equalsIgnoreCase("large")) return LargeDogIntake;
+    	else return 0;
+    }
+    
     private void listDog(HttpServletRequest request, HttpServletResponse response)
     	throws SQLException, IOException, ServletException {
     		System.out.println("getting: "+ request.getSession().getAttribute("username").toString());
+    		String daysUntilEmpty = calcDao.calculation(request.getSession().getAttribute("username").toString());
+    		//
+     	    request.setAttribute("daysUntilEmpty", daysUntilEmpty);
     		List < DogBean > listDog = dogDao.selectAllDogs(request.getSession().getAttribute("username").toString());
     	    request.setAttribute("listDog", listDog);
     	    List < FoodBagBean > listBag = foodDao.selectAllBag(request.getSession().getAttribute("username").toString());
     	    request.setAttribute("listBag", listBag);
+    	       	   
     	    RequestDispatcher dispatcher = request.getRequestDispatcher("PetFeederMain.jsp");
     	    dispatcher.forward(request, response);
     	}
@@ -91,7 +106,7 @@ public class DogServlet extends HttpServlet {
             String DogName = request.getParameter("dogName");
             String DogType = request.getParameter("dogType");
             String DogOwner = request.getParameter("owner");
-            DogBean newDog = new DogBean(DogName, DogType, DogOwner);
+            DogBean newDog = new DogBean(DogName, DogType, getDogDailyIntake(DogType), DogOwner);
             dogDao.insertDog(newDog);
             response.sendRedirect("DogServlet?action=list");
         }
@@ -102,8 +117,12 @@ public class DogServlet extends HttpServlet {
             String DogName = request.getParameter("dogName");
             String DogType = request.getParameter("dogType");
             String DogOwner = request.getParameter("owner");
-
-            DogBean book = new DogBean(id, DogName, DogType, DogOwner);
+            
+            
+            //int DogDailyAmount = Integer.parseInt(request.getParameter("dogDailyAmount"));
+            
+            
+            DogBean book = new DogBean(id, DogName, DogType, getDogDailyIntake(DogType), DogOwner);
             dogDao.updateDog(book);
             response.sendRedirect("DogServlet?action=list");
         }
