@@ -23,6 +23,7 @@ public class DogServlet extends HttpServlet {
         dogDao = new DogDao();
         foodDao = new FoodBagDao();
         calcDao = new CalculationDao();
+        new ObserverDaysLeft(calcDao);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -74,6 +75,7 @@ public class DogServlet extends HttpServlet {
     private void listDog(HttpServletRequest request, HttpServletResponse response)
     	throws SQLException, IOException, ServletException {
     		System.out.println("getting: "+ request.getSession().getAttribute("username").toString());
+    		
     		String daysUntilEmpty = calcDao.calculation(request.getSession().getAttribute("username").toString());
     		//
      	    request.setAttribute("daysUntilEmpty", daysUntilEmpty);

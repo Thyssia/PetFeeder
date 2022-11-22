@@ -43,7 +43,6 @@ public class FoodBagBean implements Serializable {
 
 	public void setFbSize(int fbSize) {
 		this.fbSize = fbSize;
-		
 	}
 	
 	public int getSCups() {
@@ -66,7 +65,8 @@ public class FoodBagBean implements Serializable {
 	public String getOwner() {
     	return Owner;
     }
-    public void setOwner(String Owner) {
+    
+	public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
