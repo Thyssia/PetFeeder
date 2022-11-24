@@ -26,7 +26,7 @@ public class UserServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         
-        UserBean user = new UserBean();
+        UserBean user = new UserBean(firstName, lastName, email, username, password);
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setEmail(email);

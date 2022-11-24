@@ -24,9 +24,9 @@ public class CalculationDao {
 	}
 	public void attach(ObserverDaysLeft observer){
 	      this.observer = observer;		
-	   }
+	}
 	
-	public String calculation(String owner)  {
+	public String calculation(String owner) throws ClassNotFoundException  {
 	 	int dailyDogsUse = 1;
 	 	int totalCupsSize = 1;
 	  	LocalDate today = LocalDate.now();

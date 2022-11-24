@@ -62,7 +62,10 @@ public class DogServlet extends HttpServlet {
     	        }
     	    } catch (SQLException ex) {
     	          throw new ServletException(ex);
-    	    }
+    	    } catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
      }
     private int getDogDailyIntake(String dogType) {
     	
@@ -73,7 +76,7 @@ public class DogServlet extends HttpServlet {
     }
     
     private void listDog(HttpServletRequest request, HttpServletResponse response)
-    	throws SQLException, IOException, ServletException {
+    	throws SQLException, IOException, ServletException, ClassNotFoundException {
     		System.out.println("getting: "+ request.getSession().getAttribute("username").toString());
     		
     		String daysUntilEmpty = calcDao.calculation(request.getSession().getAttribute("username").toString());
@@ -119,11 +122,7 @@ public class DogServlet extends HttpServlet {
             String DogName = request.getParameter("dogName");
             String DogType = request.getParameter("dogType");
             String DogOwner = request.getParameter("owner");
-            
-            
-            //int DogDailyAmount = Integer.parseInt(request.getParameter("dogDailyAmount"));
-            
-            
+                        
             DogBean book = new DogBean(id, DogName, DogType, getDogDailyIntake(DogType), DogOwner);
             dogDao.updateDog(book);
             response.sendRedirect("DogServlet?action=list");

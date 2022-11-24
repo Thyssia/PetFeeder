@@ -51,7 +51,6 @@ public class FoodBagBean implements Serializable {
 
 	public void setSCups(int sCups) {
 		this.sCups = (this.fbSize * 9);
-	//	this.sCups = sCups;
 	}
 
 	public Date getDayOpened() {

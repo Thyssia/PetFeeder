@@ -14,7 +14,8 @@ public class SendEmail {
 	String sender = "notification@petfeeder.com";
 	String host = "localhost";
 	Properties properties = System.getProperties();
-	UserBean user;
+	UserBean userBean;
+	UserDao userdao = new UserDao();
 		
 	// making sure there isn't already an instance of SendEmail going:
 	public static synchronized SendEmail getInstance() {
@@ -25,13 +26,13 @@ public class SendEmail {
 	}
 
 	// method to generate/send the email
-	public void sendEmail(UserBean user, int daysLeft) {
-			
-		String recipient = user.getEmail();
+	public void sendEmail(String user, int bob) throws ClassNotFoundException {
+		this.userBean = userdao.getUserInfo(user);	
+		String recipient = userBean.getEmail();
 		String sender = "notification@petfeeder.com";
 		String host = "localhost";
 		Properties properties = System.getProperties();
-		
+				
 		properties.setProperty("mail.smtp.host", host);
 		// creating session object to get properties
 		Session session = Session.getDefaultInstance(properties);
@@ -44,29 +45,31 @@ public class SendEmail {
 			message.setSubject("PetFeeder Reminder");
 
 			// determine whether the notification is for 7 or 14 days in advance:
-			if (daysLeft == 7) {
-
-				message.setText("Hello" + user.getFirstName() + " " + user.getLastName() + ".  "
+			if (bob == 7) {
+				System.out.println("SENDING:  Hello" + userBean.getFirstName() + " " + userBean.getLastName() + ".  "
+						+ "Your dog's food runs out in 7 days. ");
+				message.setText("Hello" + userBean.getFirstName() + " " + userBean.getLastName() + ".  "
 						+ "Your dog's food runs out in 7 days. ");
 			}
 
-			else if (daysLeft == 14) {
-
-				message.setText("Hello" + user.getFirstName() + " " + user.getLastName() + ".  "
+			else if (bob == 14) {
+				System.out.println("SENDING:  Hello" + userBean.getFirstName() + " " + userBean.getLastName() + ".  "
+						+ "Your dog's food runs out in 14 days. ");
+				message.setText("Hello" + userBean.getFirstName() + " " + userBean.getLastName() + ".  "
 						+ "Your dog's food runs out in 14 days. ");
 			}
 
 			else {
-
-				System.out.println("There was an error sending a notification to " + user.getFirstName() + " "
-						+ user.getLastName() + "'s email: " + user.getEmail());
+				System.out.println("There was an error sending a notification to " + userBean.getFirstName() + " "
+						+ userBean.getLastName() + "'s email: " + userBean.getEmail());
 			}
 
 			Transport.send(message);
-			System.out.println("The PetFeeder notification for " + user.getFirstName() + " " + user.getLastName()
-					+ " was successfully sent to " + user.getEmail());
+			System.out.println("The PetFeeder notification for " + userBean.getFirstName() + " " + userBean.getLastName()
+					+ " was successfully sent to " + userBean.getEmail());
 
 		} catch (MessagingException excp) {
+			System.out.println("Tried to send email, but failed");
 			excp.printStackTrace();
 		}
 	}

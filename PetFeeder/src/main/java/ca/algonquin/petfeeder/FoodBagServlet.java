@@ -47,7 +47,6 @@ public class FoodBagServlet extends HttpServlet {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         response.sendRedirect("DogServlet?action=list");
     }
 }

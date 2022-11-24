@@ -11,6 +11,21 @@ public class UserBean implements Serializable {
     private String username;
     private String password;
     
+    public UserBean(String firstName, String lastName, String email, String username, String password) {
+    	this.firstName = firstName;
+    	this.lastName = lastName;
+    	this.email = email;
+    	this.username = username;
+    	this.password = password;
+    }
+    
+    public UserBean (String firstName, String lastName, String email, String username) {
+    	this.firstName = firstName;
+    	this.lastName = lastName;
+    	this.email = email;
+    	this.username = username;
+    }
+    
     public String getFirstName() {
         return firstName;
     }
@@ -41,5 +56,4 @@ public class UserBean implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-    
 }
