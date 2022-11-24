@@ -13,7 +13,13 @@ public class CalculationDao {
 	private static final String SELECT_BAG_SIZE_CUPS = "select size_cups,day_opened from foodbag where owner = ?; ";
 	private ObserverDaysLeft observer;
 	private int daysLeft;
-	public int getDays() {
+	private String user;
+	
+	public String getUser() {
+		return this.user;
+	}
+	
+	public int getDaysLeft() {
 		return this.daysLeft;
 	}
 	public void attach(ObserverDaysLeft observer){
@@ -26,7 +32,7 @@ public class CalculationDao {
 	  	LocalDate today = LocalDate.now();
 	 	LocalDate foodOpenedDate = LocalDate.now().minusDays(10);
 	 	String daysUntilEmpty = "";
-	 	
+	 	this.user = owner;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
@@ -47,6 +53,7 @@ public class CalculationDao {
             	while (rs.next()) {
             		dailyDogsUse = rs.getInt("dailyUse");
             	}
+            	
             	preparedStatement2.setString(1, owner);
                 System.out.println("in calc dao, statement 2: "+ preparedStatement2);
                 ResultSet rss = preparedStatement2.executeQuery();
