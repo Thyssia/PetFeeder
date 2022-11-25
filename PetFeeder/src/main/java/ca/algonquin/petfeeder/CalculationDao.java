@@ -33,6 +33,8 @@ public class CalculationDao {
 	 	LocalDate foodOpenedDate = LocalDate.now().minusDays(10);
 	 	String daysUntilEmpty = "";
 	 	this.user = owner;
+	 	boolean foodbag = false;
+	 	boolean dog = false;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
@@ -51,38 +53,49 @@ public class CalculationDao {
             //	System.out.println("In calc dao, statement 1: " + preparedStatement);
             	ResultSet rs = preparedStatement.executeQuery();
             	while (rs.next()) {
+            		System.out.println("I am in the loop indicating results, statement 1: "+ preparedStatement);
+            		
             		dailyDogsUse = rs.getInt("dailyUse");
+            		System.out.println("Got value : " + dailyDogsUse);
+            		if (dailyDogsUse > 0) dog = true;
             	}
             	
             	preparedStatement2.setString(1, owner);
-                System.out.println("in calc dao, statement 2: "+ preparedStatement2);
+                
                 ResultSet rss = preparedStatement2.executeQuery();
                 while (rss.next()) {
+                	System.out.println("in calc dao, statement 2: "+ preparedStatement2);
                 	totalCupsSize = rss.getInt("size_cups");
                 	foodOpenedDate = rss.getDate("day_opened").toLocalDate();
-                	System.out.println("GOT DATES: " + foodOpenedDate);
+                	System.out.println("GOT DATES: " + foodOpenedDate + " and got cupsSize: " + totalCupsSize);
+                	foodbag=true;
             	}
            
         } catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-                
+        
         int daysSinceOpened = (int)ChronoUnit.DAYS.between(foodOpenedDate, today);
         if (daysSinceOpened < 0) {
         	return "Empty Bag";
         }
-       
-        this.daysLeft = ((totalCupsSize/dailyDogsUse) - daysSinceOpened);
-        daysUntilEmpty = Integer.toString(daysLeft);
-        System.out.println("Calling notifier update now: ");
-        observer.update();
+        System.out.println("DOG? " + dog);
+        System.out.println("Food? " + foodbag);
+        if ((foodbag) && (dog)) {
+        	this.daysLeft = ((totalCupsSize/dailyDogsUse) - daysSinceOpened);
+        	daysUntilEmpty = Integer.toString(daysLeft);
+        	System.out.println("Calling notifier update now: ");
+        	observer.update();
+        
            
         if (((totalCupsSize/dailyDogsUse) - daysSinceOpened) < 0) {
         //	System.out.println("Less than zero Mathing: (" + totalCupsSize + "/"+dailyDogsUse +") - " +daysSinceOpened+")");
         //	System.out.println("today " + today + "bag opened + " + foodOpenedDate);
         	return "ERROR: Your food bag finished " + Integer.toString(Math.abs(((totalCupsSize/dailyDogsUse) - daysSinceOpened))) + " days ago";
         }
+        }else daysUntilEmpty = "--";
+        
         return daysUntilEmpty;
     }
 }
