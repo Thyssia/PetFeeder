@@ -24,7 +24,7 @@ public class FoodBagServlet extends HttpServlet {
 		
     	String fbBrand = request.getParameter("food_bag_brand");
     	int fbSize = Integer.parseInt(request.getParameter("food_bag_size"));
-    	int sCups = Integer.parseInt(request.getParameter("size_cups"));
+    //	int sCups = Integer.parseInt(request.getParameter("size_cups"));
     	Date dayOpened = new Date();
 		try {
 			dayOpened = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("day_opened"));

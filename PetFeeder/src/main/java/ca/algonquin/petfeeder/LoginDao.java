@@ -10,7 +10,7 @@ public class LoginDao {
 
 	public boolean validate(LoginBean loginBean) throws ClassNotFoundException {
         boolean status = false;
-
+        
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         try (Connection connection = DriverManager

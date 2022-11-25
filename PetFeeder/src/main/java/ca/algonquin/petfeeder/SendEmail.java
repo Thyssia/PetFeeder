@@ -27,6 +27,7 @@ public class SendEmail {
 
 	// method to generate/send the email
 	public void sendEmail(String user, int bob) throws ClassNotFoundException {
+		
 		this.userBean = userdao.getUserInfo(user);	
 		String recipient = userBean.getEmail();
 		String sender = "notification@petfeeder.com";
@@ -36,7 +37,7 @@ public class SendEmail {
 		properties.setProperty("mail.smtp.host", host);
 		// creating session object to get properties
 		Session session = Session.getDefaultInstance(properties);
-
+		
 		try {
 
 			MimeMessage message = new MimeMessage(session);
