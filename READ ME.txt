@@ -1,0 +1,7 @@
+Just drag these pictures and the CSS file into the "main" directory with "java".
+
+- Sam
+
+
+
+
