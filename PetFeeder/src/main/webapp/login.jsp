@@ -19,7 +19,7 @@
 <div align="center">
 <h1>Welcome to Pet Feeder!</h1>
 <h2>Please login</h2>
-<form action="<%= request.getContextPath() %>/LoginServlet" method="post">
+<form action="<%= request.getContextPath() %>/user?action=LOGIN" method="post">
   Username <input type="text" name="username" />
   <br>
   <br>
@@ -29,7 +29,7 @@
   <input type="submit" value="Submit" />
 </form>
 <p>
-  First time here?   <a href="userregister.jsp">Register Here</a>
+  First time here?   <a href="user?action=REGISTER">Register Here</a>
 </div>
 </body>
 </html>

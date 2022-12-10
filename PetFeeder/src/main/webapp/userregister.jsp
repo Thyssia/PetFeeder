@@ -18,7 +18,7 @@
     </header>
 <div align="center">
   <h1>Pet Feeder Registration Form</h1>
-  <form action="<%= request.getContextPath() %>/register" method="post">
+  <form action="<%= request.getContextPath() %>/user?action=DOREGISTRATION" method="post">
    <table style="with: 80%">
     <tr>
      <td>First Name</td>

@@ -15,21 +15,17 @@ public class UserDao {
         
         int result = 0;
 
-        Class.forName("com.mysql.cj.jdbc.Driver");
-
-        try (Connection connection = DriverManager
-            .getConnection("jdbc:mysql://localhost:3306/petfeeder?useSSL=false", "root", "root");
-
-            // Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
-            preparedStatement.setString(1, user.getFirstName());
-            preparedStatement.setString(2, user.getLastName());
-            preparedStatement.setString(3, user.getEmail());
-            preparedStatement.setString(4, user.getUsername());
-            preparedStatement.setString(5, user.getPassword());
+       try {
+    	   Connection connection = DBConnection.getConnectionToDatabase();
+           PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
+           preparedStatement.setString(1, user.getFirstName());
+           preparedStatement.setString(2, user.getLastName());
+           preparedStatement.setString(3, user.getEmail());
+           preparedStatement.setString(4, user.getUsername());
+           preparedStatement.setString(5, user.getPassword());
             
             System.out.println(preparedStatement);
-            // Step 3: Execute the query or update query
+            // Execute the query or update query
             result = preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -38,32 +34,49 @@ public class UserDao {
         }
         return result;
     }
+	
+	public boolean validate(UserBean userBean) throws ClassNotFoundException {
+		boolean status = false;
+		
+		try {
+			Connection connection = DBConnection.getConnectionToDatabase();
+    	   
+			String sql = "select * from user where username = ? and password = ? ";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, userBean.getUsername());
+            preparedStatement.setString(2, userBean.getPassword());
+            ResultSet rs = preparedStatement.executeQuery();
+            status = rs.next();
+
+        } catch (SQLException e) {
+            
+            printSQLException(e);
+        }
+        return status;
+    }
 		
 	public UserBean getUserInfo(String username) throws ClassNotFoundException {
 		UserBean user = null;
 		String SELECT_USER_INFO = "select first_name, last_name, email, username from user where username = ?; ";
 			        
-	    Class.forName("com.mysql.cj.jdbc.Driver");
-
-	        try (Connection connection = DriverManager
-	        		.getConnection("jdbc:mysql://localhost:3306/petfeeder?useSSL=false", "root", "root");
-
-	            PreparedStatement prepStat = connection.prepareStatement(SELECT_USER_INFO)) {
-	        	prepStat.setString(1, username);
-	        	System.out.println(prepStat);
-	        	ResultSet rs = prepStat.executeQuery();
-	        	// Process the ResultSet object.
-	        	 while (rs.next()) {
-		            	String FirstName = rs.getString("first_name");
-		                String LastName = rs.getString("last_name");
-		                String email = rs.getString("email");
-		                user = new UserBean(FirstName, LastName, email, username);
-	        	 }
-	        } catch (SQLException e) {
-	            // process sql exception
-	            printSQLException(e);
+	    try {
+	    	Connection connection = DBConnection.getConnectionToDatabase();
+	    	PreparedStatement prepStat = connection.prepareStatement(SELECT_USER_INFO);
+	        prepStat.setString(1, username);
+	        System.out.println(prepStat);
+	        ResultSet rs = prepStat.executeQuery();
+	        // Process the ResultSet object.
+	        while (rs.next()) {
+	        	String FirstName = rs.getString("first_name");
+		        String LastName = rs.getString("last_name");
+		        String email = rs.getString("email");
+		        user = new UserBean(FirstName, LastName, email, username);
 	        }
-	        return user;
+	    } catch (SQLException e) {
+	    	// process sql exception
+	        printSQLException(e);
+	    }
+	    return user;
 	}
 
     private void printSQLException(SQLException ex) {

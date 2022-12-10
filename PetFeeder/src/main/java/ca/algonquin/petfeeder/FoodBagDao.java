@@ -2,12 +2,12 @@ package ca.algonquin.petfeeder;
 
 import java.sql.Connection;
 import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class FoodBagDao {
 	private static final String SELECT_ALL_FOOD = "select * from foodbag where owner = ?; ";
@@ -18,16 +18,12 @@ public class FoodBagDao {
 	 		
 		int result = 0;
 		
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		
 		// convert from java date to sql date
 		java.sql.Date sqlDate = new java.sql.Date(foodbag.getDayOpened().getTime());
 		System.out.println(foodbag.getFbSize());
-        try (Connection connection = DriverManager
-            .getConnection("jdbc:mysql://localhost:3306/petfeeder?useSSL=false", "root", "root");
-        	
-            // Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_FOODBAG_SQL)) {
+        try {
+        	Connection connection = DBConnection.getConnectionToDatabase();
+        	PreparedStatement preparedStatement = connection.prepareStatement(INSERT_FOODBAG_SQL);
             preparedStatement.setString(1, foodbag.getFbBrand());
             preparedStatement.setInt(2, foodbag.getFbSize());
             preparedStatement.setInt(3, foodbag.getSCups());
@@ -50,24 +46,16 @@ public class FoodBagDao {
 		
         List < FoodBagBean > fb = new ArrayList < > ();
         // Step 1: Establishing a Connection
+       	
         try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-	
-        try (Connection connection = DriverManager
-            .getConnection("jdbc:mysql://localhost:3306/petfeeder?useSSL=false", "root", "root");
-        	
-        	// Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_FOOD);) {
+        	Connection connection = DBConnection.getConnectionToDatabase();
+        	PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_FOOD);
         	preparedStatement.setString(1, owner);
             System.out.println(preparedStatement);
-            // Step 3: Execute the query or update query
+            // Step 2: Execute the query or update query
             ResultSet rs = preparedStatement.executeQuery();
 
-            // Step 4: Process the ResultSet object.
+            // Step 3: Process the ResultSet object.
             while (rs.next()) {
             	int id = rs.getInt("id");
                 String fbBrand = rs.getString("food_bag_brand");

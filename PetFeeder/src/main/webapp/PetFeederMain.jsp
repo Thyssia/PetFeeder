@@ -12,14 +12,15 @@
 
     <body>
     	<header>
-		<nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
-			<div>
-				<br>
-				<br>
-				<br>
-            </div>
-        </nav>
-    	</header>
+		<div class="navbar navbar-expand-md navbar-dark" role="navigation" style="background-color: tomato">
+			<form action="<%= request.getContextPath() %>/user?action=LOGOUT" method="post">
+					<input type="submit" value="Logout" /> 
+			</form>
+			<br>
+			<br>
+			<br>
+        </div>
+        </header>
      	<div align="center">
 		<%
 			HttpSession session = request.getSession(false);
@@ -31,7 +32,7 @@
     		<div class="row">
                 <!-- <div class="alert alert-success" *ngIf='message'>{{message}} </div> -->
                 <div class="container">
-                    <h3 class="text-center">List of Dogs Registered to <%= user %></h3>
+                    <h3 class="text-center">List of dogs registered to <%= user %></h3>
                     <hr>
                     <br>
                     <table style="with: 80%" class="table table-bordered">

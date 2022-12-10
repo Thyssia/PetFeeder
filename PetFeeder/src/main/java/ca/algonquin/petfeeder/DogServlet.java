@@ -32,10 +32,16 @@ public class DogServlet extends HttpServlet {
 			System.out.println("Got action in post: " + action);
     	doGet(request, response);
     }
+    
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     	throws ServletException, IOException {
-    		String action = request.getParameter("action");
-    		System.out.println("Got action in get: " + action);
+   	
+    	String action = "goLogin";
+        
+   	    if (request.getSession().getAttribute("username") != null) {
+   	       	action = request.getParameter("action");
+   	    	System.out.println("Got action in get: " + action);
+   	    }
    	        try {
    	        	switch (action) {
    	        		case "new":
@@ -56,6 +62,9 @@ public class DogServlet extends HttpServlet {
     	            case "list":
     	                listDog(request, response);
     	                break;
+    	            case "goLogin":
+    	            	goLogin(request, response);
+    	                break;
     	            default:
     	            	listDog(request, response);
     	                break;
@@ -63,7 +72,6 @@ public class DogServlet extends HttpServlet {
     	    } catch (SQLException ex) {
     	          throw new ServletException(ex);
     	    } catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
      }
@@ -80,8 +88,7 @@ public class DogServlet extends HttpServlet {
     		System.out.println("getting: "+ request.getSession().getAttribute("username").toString());
     		
     		String daysUntilEmpty = calcDao.calculation(request.getSession().getAttribute("username").toString());
-    		//
-     	    request.setAttribute("daysUntilEmpty", daysUntilEmpty);
+    		request.setAttribute("daysUntilEmpty", daysUntilEmpty);
     		List < DogBean > listDog = dogDao.selectAllDogs(request.getSession().getAttribute("username").toString());
     	    request.setAttribute("listDog", listDog);
     	    List < FoodBagBean > listBag = foodDao.selectAllBag(request.getSession().getAttribute("username").toString());
@@ -122,7 +129,6 @@ public class DogServlet extends HttpServlet {
             String DogName = request.getParameter("dogName");
             String DogType = request.getParameter("dogType");
             String DogOwner = request.getParameter("owner");
-                        
             DogBean book = new DogBean(id, DogName, DogType, getDogDailyIntake(DogType), DogOwner);
             dogDao.updateDog(book);
             response.sendRedirect("DogServlet?action=list");
@@ -134,5 +140,11 @@ public class DogServlet extends HttpServlet {
             dogDao.deleteDog(id);
             response.sendRedirect("DogServlet?action=list");
     	}
+    
+    private void goLogin(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException {
+
+                response.sendRedirect("login.jsp");
+        	}
 }
  
