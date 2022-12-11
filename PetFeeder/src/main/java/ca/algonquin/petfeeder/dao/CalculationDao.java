@@ -81,7 +81,7 @@ public class CalculationDao {
         
            
         if (((totalCupsSize/dailyDogsUse) - daysSinceOpened) < 0) {
-        //	System.out.println("Less than zero Mathing: (" + totalCupsSize + "/"+dailyDogsUse +") - " +daysSinceOpened+")");
+        //	System.out.println("Less than zero Math: (" + totalCupsSize + "/"+dailyDogsUse +") - " +daysSinceOpened+")");
         //	System.out.println("today " + today + "bag opened + " + foodOpenedDate);
         	return "ERROR: Your food bag finished " + Integer.toString(Math.abs(((totalCupsSize/dailyDogsUse) - daysSinceOpened))) + " days ago";
         }
