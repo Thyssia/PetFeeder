@@ -1,4 +1,4 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.beans;
 
 import java.io.Serializable;
 import java.util.Date;

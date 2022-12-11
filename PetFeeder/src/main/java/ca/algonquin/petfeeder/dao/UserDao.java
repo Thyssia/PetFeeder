@@ -1,10 +1,13 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import ca.algonquin.petfeeder.beans.UserBean;
+import ca.algonquin.petfeeder.utils.DBConnection;
 
 public class UserDao {
 	

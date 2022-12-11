@@ -1,4 +1,6 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.utils;
+
+import ca.algonquin.petfeeder.dao.CalculationDao;
 
 public class ObserverDaysLeft {
 	protected CalculationDao calcDao;

@@ -1,4 +1,4 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import ca.algonquin.petfeeder.beans.FoodBagBean;
+import ca.algonquin.petfeeder.utils.DBConnection;
 
 
 public class FoodBagDao {

@@ -1,4 +1,4 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+
+import ca.algonquin.petfeeder.utils.DBConnection;
+import ca.algonquin.petfeeder.utils.ObserverDaysLeft;
 
 public class CalculationDao {
 	private static final String SELECT_ALL_DOGS = "select sum(dog_daily_amount) as dailyUse from dog where dog_owner = ?; ";

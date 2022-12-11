@@ -1,8 +1,12 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.utils;
 
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
+
+import ca.algonquin.petfeeder.beans.UserBean;
+import ca.algonquin.petfeeder.dao.UserDao;
+
 import javax.activation.*;
 import javax.mail.Session;
 import javax.mail.Transport;

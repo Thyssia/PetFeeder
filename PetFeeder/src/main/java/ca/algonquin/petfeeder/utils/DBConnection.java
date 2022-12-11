@@ -1,4 +1,4 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

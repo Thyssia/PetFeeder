@@ -1,4 +1,4 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import ca.algonquin.petfeeder.beans.UserBean;
+import ca.algonquin.petfeeder.dao.UserDao;
 
 //@WebServlet("/register")
 public class UserServlet extends HttpServlet {

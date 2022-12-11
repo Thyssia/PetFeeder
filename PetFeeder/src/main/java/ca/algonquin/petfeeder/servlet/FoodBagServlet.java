@@ -1,4 +1,4 @@
-package ca.algonquin.petfeeder;
+package ca.algonquin.petfeeder.servlet;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,6 +9,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import ca.algonquin.petfeeder.beans.FoodBagBean;
+import ca.algonquin.petfeeder.dao.FoodBagDao;
 
 //@WebServlet("/FoodBagServlet")
 public class FoodBagServlet extends HttpServlet {
