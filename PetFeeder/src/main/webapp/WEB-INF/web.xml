@@ -6,7 +6,7 @@
   </welcome-file-list>
   <servlet>
        <servlet-name>UserServlet</servlet-name>
-       <servlet-class>ca.algonquin.petfeeder.UserServlet</servlet-class>
+       <servlet-class>ca.algonquin.petfeeder.servlet.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
        <servlet-name>UserServlet</servlet-name>
@@ -14,7 +14,7 @@
   </servlet-mapping>
     <servlet>
        <servlet-name>DogServlet</servlet-name>
-       <servlet-class>ca.algonquin.petfeeder.DogServlet</servlet-class>
+       <servlet-class>ca.algonquin.petfeeder.servlet.DogServlet</servlet-class>
   </servlet>
   <servlet-mapping>
        <servlet-name>DogServlet</servlet-name>
@@ -22,7 +22,7 @@
   </servlet-mapping>
       <servlet>
        <servlet-name>FoodBagServlet</servlet-name>
-       <servlet-class>ca.algonquin.petfeeder.FoodBagServlet</servlet-class>
+       <servlet-class>ca.algonquin.petfeeder.servlet.FoodBagServlet</servlet-class>
   </servlet>
   <servlet-mapping>
        <servlet-name>FoodBagServlet</servlet-name>
