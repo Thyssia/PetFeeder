@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+.index-heading1 {
+	background-color: tomato;
+	color: black;
+	font-family: 'Ubuntu';
+	text-decoration: underline;
+	font-size: 200%;
+	padding-left: 55px;
+	text-decoration-thickness: 7px;
+}
+
+.index-welcome-login {
+	background-color: #0f004f;
+	color: chartreuse;
+	font-family: 'Ubuntu';
+	height: 100%;
+}
+
+.inner-login-div {
+	background-color: #001e34;
+	height: 60%;
+	width: 60%;
+	border-style: double;
+	padding-bottom:50px;
+}
+
+#red-med-text {
+	text-align: center;
+	color: red;
+	text-decoration: underline chartreuse;
+	text-decoration-thickness: 1px;
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+	background-color: rgba(54, 202, 197, 0.8);
+	background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1),
+		rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px),
+		repeating-linear-gradient(60deg, rgba(255, 255, 255, .1),
+		rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px),
+		linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
+		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)),
+		linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
+		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6));
+	background-size: 70px 120px;
+}
+
+.dog1 {
+	float: right;
+	padding-top: 10px;
+	padding-right: 100px;
+}
+
+.dog2 {
+	float: left;
+	padding-top: 50px;
+	padding-left: 50px;
+}
+
+.dog3 {
+	float: right;
+	padding-top: 50px;
+	padding-right: 50px;
+}
+
+.submit-btn {
+	background-color: #00a09d;
+	border: none;
+	color: #1f0078;
+	padding: 7px 16px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 200%;
+}
+
+/*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP =========================================================                  */
+.table1 {
+	border: 1px, solid;
+	color: black;
+	background-color: #00ffff;
+}
+
+.reg-div1 {
+	background-color: #2ec27e;
+	margin: auto;
+	width: 50%;
+	border: 6px solid green;
+	padding-bottom: 17px;
+	border-style: inset;
+}
+
+reg-div1, table {
+	border-style: outset;
+}
+
+.another-submit-btn {
+	background-color: #bf3f3f;
+	border: none;
+	color: #f5c211;
+	padding: 7px 16px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 200%;
+	border-style: inset;
+}
+
+.tomato-input {
+	background-color: tomato;
+	color: black;
+}
+
+.another-submit-btn:hover {
+	background-color: yellow;
+	color: black;
+}
