@@ -6,7 +6,7 @@
   </welcome-file-list>
   <servlet>
        <servlet-name>UserServlet</servlet-name>
-       <servlet-class>ca.algonquin.petfeeder.UserServlet</servlet-class>
+       <servlet-class>ca.algonquin.petfeeder.servlet.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
        <servlet-name>UserServlet</servlet-name>
@@ -14,23 +14,15 @@
   </servlet-mapping>
     <servlet>
        <servlet-name>DogServlet</servlet-name>
-       <servlet-class>ca.algonquin.petfeeder.DogServlet</servlet-class>
+       <servlet-class>ca.algonquin.petfeeder.servlet.DogServlet</servlet-class>
   </servlet>
   <servlet-mapping>
        <servlet-name>DogServlet</servlet-name>
        <url-pattern>/DogServlet</url-pattern>  <!-- This is the URL of the servlet. -->
   </servlet-mapping>
-    <servlet>
-       <servlet-name>LoginServlet</servlet-name>
-       <servlet-class>ca.algonquin.petfeeder.LoginServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-       <servlet-name>LoginServlet</servlet-name>
-       <url-pattern>/LoginServlet</url-pattern>  <!-- This is the URL of the servlet. -->
-  </servlet-mapping>
       <servlet>
        <servlet-name>FoodBagServlet</servlet-name>
-       <servlet-class>ca.algonquin.petfeeder.FoodBagServlet</servlet-class>
+       <servlet-class>ca.algonquin.petfeeder.servlet.FoodBagServlet</servlet-class>
   </servlet>
   <servlet-mapping>
        <servlet-name>FoodBagServlet</servlet-name>
