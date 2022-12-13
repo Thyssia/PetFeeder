@@ -11,9 +11,8 @@
 </head>
 <body>
 	<header class="index-heading1">
-
 		<div>
-			<img class="dog1" src="dog1.png" alt="small-dog-clipart1" />
+			<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
 			<h1>
 				<i> PET FEEDER </i>
 			</h1>
@@ -21,6 +20,10 @@
 		</div>
 
 	</header>
+	<br>	<br>
+		<br>
+		<br>
+	
 <div class="reg-div1" align="center">
   <h1>Pet Feeder Registration Form</h1>
   <form action="<%= request.getContextPath() %>/register" method="post">
@@ -55,7 +58,10 @@
   <p>PetFeeder will send you email notifications as well as display in-app information about your dog's food quantity. <p>
  </div>
  
- <img src="dog4.png" alt="a-dog-clipart" />
+ <img class="dog2" src="./Images/dog7.png" alt="7-dog-clipart" />
+ 
+ <img class="dog1" src="./Images/dog-6.png" alt="6-dog-clipart" />
+ 
  
 </body>
 </html>
