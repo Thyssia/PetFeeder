@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +8,9 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" type="text/css"
 	href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-<title>First Landing Page</title>
+<title>User Register</title>
 </head>
+<div id=wrapper>
 <body>
 	<header class="index-heading1">
 		<div>
@@ -64,4 +66,5 @@
  
  
 </body>
+</div>
 </html>
