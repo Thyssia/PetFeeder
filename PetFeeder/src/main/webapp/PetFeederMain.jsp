@@ -3,36 +3,47 @@
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>PetFeeder Home</title>
-		<style>
-		table, th, td {border: 1px solid black;}
-		</style>
-    </head>
-
-    <body>
-    	<header>
-		<div class="navbar navbar-expand-md navbar-dark" role="navigation" style="background-color: tomato">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<title>User Register</title>
+</head>
+<div id=wrapper>
+<body>
+	<header class="index-heading1">
+	
+		<div>
+		
+			<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
+			<div class="logout-btn-div" role="navigation">
 			<form action="<%= request.getContextPath() %>/user?action=LOGOUT" method="post">
-					<input type="submit" value="Logout" /> 
+					<input class="logout-btn" type="submit" value="Logout" /> 
 			</form>
-			<br>
-			<br>
-			<br>
+			
         </div>
-        </header>
-     	<div align="center">
+			
+			
+			<h1>
+				<i> PET FEEDER </i>
+			</h1>
+
+		</div>
+
+	</header>
+     	<div class="main-div" align="center">
 		<%
 			HttpSession session = request.getSession(false);
 			String user = (String) session.getAttribute("username");
 			
 		%>
-  		<h1>Welcome back to Pet Feeder <%= user %>.</h1>
-  	   	<h2 style="color: red;"> Your pet's food will end in ${daysUntilEmpty} days.</h2>
+  		<h1>Welcome back to Pet Feeder, <%= user %>!</h1>
+  	   	<h2 > Your pet's food will end in ${daysUntilEmpty} days.</h2>
     		<div class="row">
                 <!-- <div class="alert alert-success" *ngIf='message'>{{message}} </div> -->
                 <div class="container">
-                    <h3 class="text-center">List of dogs registered to <%= user %></h3>
+                    <h3 class="text-center"><i>List of dogs registered to <%= user %>: </i></h3>
                     <hr>
                     <br>
                     <table style="with: 80%" class="table table-bordered">
@@ -123,4 +134,5 @@
           </div>  
 		</div>
 	</body>
+	</div>
 </html>
