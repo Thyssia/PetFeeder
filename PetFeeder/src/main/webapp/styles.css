@@ -68,15 +68,17 @@ html, body {
 }
 
 .dog5 {
-	float: left;
+	float: right;
 	padding-top: 50px;
-	padding-left: 50px;
+	padding-bottom: 230px;
+	padding-left: 20px;
+	padding-right: 30px;
 }
 
 .dog9 {
-	float: right;
-	padding-top: 50px;
-	padding-right: 50px;
+	float: left;
+	padding-top: 320px;
+	padding-left: 30px;
 }
 
 .submit-btn {
@@ -185,12 +187,18 @@ reg-div1, table {
 	
 }
 
+#main-page-message {
+	
+	color: #ab3333;
+	
+}
 
-.main-div,h2 {
+#main-page-heading {
 	
-	color:red;
-	
-	
+	color: black;
+	background-color: yellow;
+	width:60%;
+	border-radius: rounded corners;
 }
 
 
