@@ -9,6 +9,7 @@
 	href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <title>First Landing Page</title>
 </head>
+<div id=wrapper>
 <body>
 	<header class="index-heading1">
 
@@ -51,6 +52,6 @@
 		</div>
 		<img src="./Images/dog8.png" alt="small-dog-clipart8" /> 
 	</div>
-	
+	</div>
 </body>
 </html>
