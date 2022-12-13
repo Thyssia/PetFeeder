@@ -152,6 +152,306 @@ reg-div1, table {
 	color: black;
 }
 
+/*============== BELOW: CODE EXCLUSIVE TO PETFEEDER MAIN PAGE =============================*/ 
+
+
+.logout-btn-div {
+	
+	float:right;
+	background-color:tomato;
+	padding-right:111px;
+	padding-top:15px;
+	
+}
+
+
+.logout-btn { background-color: #00056e;
+	
+	color: #f6d32d;
+	
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size:90%;
+	border-style: inset;
+		border-radius:10px;
+	
+}
+
+
+.logout-btn:hover {
+	
+	background-color:chartreuse;
+	color:#ff0000;
+	
+	
+	
+}
+
+.main-div {
+	
+	
+	background-color: #00c832;
+	height: 70%;
+  width: 70%;
+  position: center;
+	border-style: double;
+	margin:auto;
+	border-radius:23px;
+	
+	
+}
+
+#main-page-message {
+	
+	color: #cc0000;
+	font-size:300%;
+}
+
+#main-page-heading {
+	
+	color: black;
+	background-color: yellow;
+	width:60%;
+	border-radius: 25px;
+}
+
+.table-enclose-div {
+	
+	background-color: navy;
+	border-radius: 20px;
+	width:49%;
+	color:yellow;
+}
+
+
+.add-dog-btn { background-color: #00056e;
+	
+	color: #f6d32d;
+	
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size:127%;
+	border-style: inset;
+		border-radius:10px;
+	
+}
+
+
+.add-dog-btn:hover {
+	
+	background-color:chartreuse;
+	color:black;
+	
+	
+	
+}
+
+
+
+.add-bag-btn { background-color: #00056e;
+	
+	color: #f6d32d;
+	
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size:127%;
+	border-style: inset;
+	border-radius:10px;
+}
+
+
+.add-bag-btn:hover {
+	
+	background-color:#ed333b;
+	color:black;
+	
+	
+	
+}
+
+#table-title-main {
+	
+	color:magenta;
+	font-size:150%;
+	text-decoration: underline;
+	text-decoration-color: yellow;
+	
+}
+
+
+.dog-house {
+	
+	float:left;
+	
+	padding-left:50px;
+	
+	
+}
+.vintage-pup {
+	
+	float:right;
+	padding-right:50px;
+	
+}
+
+
+@charset "UTF-8";
+
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+}
+.index-heading1 {
+	background-color: tomato;
+	color: black;
+	font-family: 'Ubuntu';
+	text-decoration: underline;
+	font-size: 227%;
+	padding-left: 55px;
+	text-decoration-thickness: 7px;
+	border-radius:13px;
+	
+	
+}
+
+.index-welcome-login {
+	background-color: #0f004f;
+	color: chartreuse;
+	font-family: 'Ubuntu';
+	height: 100%;
+}
+
+.inner-login-div {
+	background-color: #001e34;
+	height: 39%;
+	width: 57%;
+	border-style: double;
+	padding-bottom:50px;
+}
+
+#red-med-text {
+	text-align: center;
+	color: red;
+	text-decoration: underline chartreuse;
+	text-decoration-thickness: 1px;
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+	background-color: rgba(54, 202, 197, 0.8);
+	background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1),
+		rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px),
+		repeating-linear-gradient(60deg, rgba(255, 255, 255, .1),
+		rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px),
+		linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
+		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)),
+		linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
+		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6));
+	background-size: 70px 120px;
+	opacity: 94%;
+}
+
+.submit-btn:hover {
+	background-color: chartreuse;
+	color: #001539;
+}
+
+.dog1 {
+	float: right;
+	padding-top: 10px;
+	padding-right: 100px;
+}
+
+.dog5 {
+	float: right;
+	padding-top: 50px;
+	padding-bottom: 230px;
+	padding-left: 20px;
+	padding-right: 30px;
+}
+
+.dog9 {
+	float: left;
+	padding-top: 320px;
+	padding-left: 30px;
+}
+
+.submit-btn {
+	background-color: #00a09d;
+	border: none;
+	color: #1f0078;
+	padding: 7px 16px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 200%;
+	border-radius:15px;
+		border-radius:10px;
+	
+}
+
+.another-submit-btn:hover {
+	background-color: yellow;
+	color: black;
+}
+
+/*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP =========================================================                  */
+.table1 {
+	border: 1px, solid;
+	color: black;
+	background-color: #00ffff;
+		border-radius:10px;
+	
+}
+
+.reg-div1 {
+	background-color: #2ec27e;
+	margin: auto;
+	width: 50%;
+	border: 6px solid green;
+	padding-bottom: 17px;
+	border-style: inset;
+		border-radius:10px;
+	
+}
+
+reg-div1, table {
+	border-style: outset;
+		border-radius:10px;
+	
+}
+
+.another-submit-btn {
+	background-color: #bf3f3f;
+	border: none;
+	color: #f1ff00;
+	padding: 7px 16px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 200%;
+	border-style: inset;
+		border-radius:10px;
+	
+}
+
+.tomato-input {
+	background-color: tomato;
+	color: black;
+		border-radius:10px;
+	
+}
+
+.another-submit-btn:hover {
+	background-color: yellow;
+	color: black;
+}
+
 /*============== BELOW: CODE EXCLUSIVE TO PETFEEDER MAIN PAGE */
 
 
