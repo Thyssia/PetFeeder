@@ -26,8 +26,8 @@
 		<br><br><br><br>
 
 		<div class="inner-login-div">
-			<img class="dog2" src="./Images/dog2.png" alt="small-dog-clipart2" /> 
-			<img class="dog3" src="./Images/dog3.png" alt="small-dog-clipart3" /> 
+			<img class="dog5" src="./Images/dog5.png" alt="small-dog-clipart5" /> 
+			<img class="dog9" src="./Images/dog9.png" alt="small-dog-clipart9" /> 
 			<br>
 			<br>
 			<h1>Welcome to Pet Feeder!</h1>
@@ -49,7 +49,7 @@
 				<br>
 				<br>
 		</div>
-		
+		<img src="./Images/dog8.png" alt="small-dog-clipart8" /> 
 	</div>
 	
 </body>
