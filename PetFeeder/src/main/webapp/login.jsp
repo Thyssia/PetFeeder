@@ -12,19 +12,15 @@
 <div id=wrapper>
 	<body>
 		<header class="index-heading1">
-
 			<div>
 				<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
 				<h1>
 					<i> PET FEEDER </i>
 				</h1>
-
 			</div>
-
 		</header>
 		<div class="index-welcome-login" align="center">
 			<br> <br> <br> <br> <br>
-
 			<div class="inner-login-div">
 				<img class="dog5" src="./Images/dog5.png" alt="small-dog-clipart5" />
 				<img class="dog9" src="./Images/dog9.png" alt="small-dog-clipart9" />
