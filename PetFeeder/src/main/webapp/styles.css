@@ -5,6 +5,7 @@
     margin-right:auto;
     width:90%;
 }
+
 .index-heading1 {
 	background-color: tomato;
 	color: black;
@@ -14,8 +15,6 @@
 	padding-left: 55px;
 	text-decoration-thickness: 7px;
 	border-radius:13px;
-	
-	
 }
 
 .index-welcome-login {
@@ -91,8 +90,7 @@ html, body {
 	cursor: pointer;
 	font-size: 200%;
 	border-radius:15px;
-		border-radius:10px;
-	
+	border-radius:10px;
 }
 
 .another-submit-btn:hover {
@@ -106,8 +104,7 @@ html, body {
 	border: 1px, solid;
 	color: black;
 	background-color: #00ffff;
-		border-radius:10px;
-	
+	border-radius:10px;
 }
 
 .reg-div1 {
@@ -117,14 +114,12 @@ html, body {
 	border: 6px solid green;
 	padding-bottom: 17px;
 	border-style: inset;
-		border-radius:10px;
-	
+	border-radius:10px;
 }
 
-reg-div1, table {
+.reg-div1, table {
 	border-style: outset;
-		border-radius:10px;
-	
+	border-radius:10px;
 }
 
 .another-submit-btn {
@@ -137,15 +132,13 @@ reg-div1, table {
 	cursor: pointer;
 	font-size: 200%;
 	border-style: inset;
-		border-radius:10px;
-	
+	border-radius:10px;
 }
 
 .tomato-input {
 	background-color: tomato;
 	color: black;
-		border-radius:10px;
-	
+	border-radius:10px;
 }
 
 .another-submit-btn:hover {
@@ -157,60 +150,44 @@ reg-div1, table {
 
 
 .logout-btn-div {
-	
 	float:right;
 	background-color:tomato;
 	padding-right:111px;
 	padding-top:15px;
-	
 }
 
-
-.logout-btn { background-color: #00056e;
-	
+.logout-btn { 
+	background-color: #00056e;
 	color: #f6d32d;
-	
 	text-decoration: none;
 	margin: 4px 2px;
 	cursor: pointer;
 	font-size:90%;
 	border-style: inset;
-		border-radius:10px;
-	
+	border-radius:10px;
 }
 
-
 .logout-btn:hover {
-	
 	background-color:chartreuse;
 	color:#ff0000;
-	
-	
-	
 }
 
 .main-div {
-	
-	
 	background-color: #00c832;
 	height: 70%;
-  width: 70%;
-  position: center;
+  	width: 70%;
+  	position: center;
 	border-style: double;
 	margin:auto;
 	border-radius:23px;
-	
-	
 }
 
 #main-page-message {
-	
 	color: #cc0000;
 	font-size:300%;
 }
 
 #main-page-heading {
-	
 	color: black;
 	background-color: yellow;
 	width:60%;
@@ -218,43 +195,14 @@ reg-div1, table {
 }
 
 .table-enclose-div {
-	
 	background-color: navy;
 	border-radius: 20px;
 	width:49%;
 	color:yellow;
 }
 
-
 .add-dog-btn { background-color: #00056e;
-	
 	color: #f6d32d;
-	
-	text-decoration: none;
-	margin: 4px 2px;
-	cursor: pointer;
-	font-size:127%;
-	border-style: inset;
-		border-radius:10px;
-	
-}
-
-
-.add-dog-btn:hover {
-	
-	background-color:chartreuse;
-	color:black;
-	
-	
-	
-}
-
-
-
-.add-bag-btn { background-color: #00056e;
-	
-	color: #f6d32d;
-	
 	text-decoration: none;
 	margin: 4px 2px;
 	cursor: pointer;
@@ -263,39 +211,42 @@ reg-div1, table {
 	border-radius:10px;
 }
 
+.add-dog-btn:hover {
+	background-color:chartreuse;
+	color:black;
+}
+
+.add-bag-btn { 
+	background-color: #00056e;
+	color: #f6d32d;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size:127%;
+	border-style: inset;
+	border-radius:10px;
+}
 
 .add-bag-btn:hover {
-	
 	background-color:#ed333b;
 	color:black;
-	
-	
-	
 }
 
 #table-title-main {
-	
 	color:magenta;
 	font-size:150%;
 	text-decoration: underline;
 	text-decoration-color: yellow;
-	
 }
-
 
 .dog-house {
-	
 	float:left;
-	
 	padding-left:50px;
-	
-	
 }
+
 .vintage-pup {
-	
 	float:right;
 	padding-right:50px;
-	
 }
 
 
@@ -304,7 +255,6 @@ reg-div1, table {
 
 
 .newdog-div {
-	
 	background-color:#8d2c2c;
 	width:60%;
 	margin:auto;
@@ -316,14 +266,12 @@ reg-div1, table {
 
 
 h1.newdog-div {
-	
 	color:#f1ff00;
 	width:30%;
 	border-color:#ffde00;
 }
 
 input.newdog-div {
-	
 	background-color:tomato;
 	width:20%;
 	color:black;
@@ -333,31 +281,25 @@ input.newdog-div {
 }
 
 .new-dog-select {
-	
 	background:#007551;
 	color:white;
-     font-size:123%;
-     border-style:outset;	
-     border-radius:14px;
-     font-size:120%;
+    font-size:123%;
+    border-style:outset;	
+    border-radius:14px;
+    font-size:120%;
 }
 
-
-
-
-
-	.yet-another-submit-btn {
+.yet-another-submit-btn {
 	background-color: #bf3f3f;
 	border: none;
 	color: #f1ff00;
 	padding: 7px 16px;
-	
+
 	margin: 4px 2px;
 	cursor: pointer;
 	font-size: 176%;
 	border-style: outset;
-		border-radius:25px;
-	
+	border-radius:25px;
 }
 	
 	
