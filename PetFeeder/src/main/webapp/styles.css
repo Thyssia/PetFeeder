@@ -198,7 +198,7 @@ reg-div1, table {
 	color: black;
 	background-color: yellow;
 	width:60%;
-	border-radius: rounded corners;
+	border-radius: 25px;
 }
 
 
