@@ -6,9 +6,12 @@
 	color: black;
 	font-family: 'Ubuntu';
 	text-decoration: underline;
-	font-size: 200%;
+	font-size: 227%;
 	padding-left: 55px;
 	text-decoration-thickness: 7px;
+	
+	
+	
 }
 
 .index-welcome-login {
@@ -20,8 +23,8 @@
 
 .inner-login-div {
 	background-color: #001e34;
-	height: 60%;
-	width: 60%;
+	height: 39%;
+	width: 57%;
 	border-style: double;
 	padding-bottom:50px;
 }
@@ -46,6 +49,12 @@ html, body {
 		linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
 		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6));
 	background-size: 70px 120px;
+	opacity: 90%;
+}
+
+.submit-btn:hover {
+	background-color: chartreuse;
+	color: #001539;
 }
 
 .dog1 {
@@ -54,13 +63,13 @@ html, body {
 	padding-right: 100px;
 }
 
-.dog2 {
+.dog5 {
 	float: left;
 	padding-top: 50px;
 	padding-left: 50px;
 }
 
-.dog3 {
+.dog9 {
 	float: right;
 	padding-top: 50px;
 	padding-right: 50px;
@@ -75,6 +84,11 @@ html, body {
 	margin: 4px 2px;
 	cursor: pointer;
 	font-size: 200%;
+}
+
+.another-submit-btn:hover {
+	background-color: yellow;
+	color: black;
 }
 
 /*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP =========================================================                  */
