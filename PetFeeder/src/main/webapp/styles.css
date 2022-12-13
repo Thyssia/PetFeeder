@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
-
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+}
 .index-heading1 {
 	background-color: tomato;
 	color: black;
@@ -132,3 +136,61 @@ reg-div1, table {
 	background-color: yellow;
 	color: black;
 }
+
+/*============== BELOW: CODE EXCLUSIVE TO PETFEEDER MAIN PAGE */
+
+
+.logout-btn-div {
+	
+	float:right;
+	background-color:tomato;
+	padding-right:111px;
+	padding-top:15px;
+	
+}
+
+
+.logout-btn { background-color: #00056e;
+	
+	color: #f6d32d;
+	
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size:90%;
+	border-style: inset;
+	
+}
+
+
+.logout-btn:hover {
+	
+	background-color:chartreuse;
+	color:#ff0000;
+	
+	
+	
+}
+
+.main-div {
+	
+	
+	background-color: #00c832;
+	height: 70%;
+  width: 70%;
+  position: center;
+	border-style: double;
+	margin:auto;
+	
+	
+}
+
+
+.main-div,h2 {
+	
+	color:red;
+	
+	
+}
+
+
