@@ -101,6 +101,7 @@ html, body {
 }
 
 /*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP =========================================================                  */
+
 .table1 {
 	border: 1px, solid;
 	color: black;
@@ -296,5 +297,69 @@ reg-div1, table {
 	padding-right:50px;
 	
 }
+
+
+/*================  CSS EXCLUSIVE TO EDITDOG PAGE  ======================*/
+
+
+
+.newdog-div {
+	
+	background-color:#8d2c2c;
+	width:60%;
+	margin:auto;
+	border:outset;
+	border-width:7px;
+	border-color:#1a5fb4;
+	color: black;
+}
+
+
+h1.newdog-div {
+	
+	color:#f1ff00;
+	width:30%;
+	border-color:#ffde00;
+}
+
+input.newdog-div {
+	
+	background-color:tomato;
+	width:20%;
+	color:black;
+	border:inset;
+	border-color:#ff0000;
+	font-size:140%;
+}
+
+.new-dog-select {
+	
+	background:#007551;
+	color:white;
+     font-size:123%;
+     border-style:outset;	
+     border-radius:14px;
+     font-size:120%;
+}
+
+
+
+
+
+	.yet-another-submit-btn {
+	background-color: #bf3f3f;
+	border: none;
+	color: #f1ff00;
+	padding: 7px 16px;
+	
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 176%;
+	border-style: outset;
+		border-radius:25px;
+	
+}
+	
+	
 
 
