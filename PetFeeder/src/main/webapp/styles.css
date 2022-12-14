@@ -37,7 +37,6 @@
 	color: red;
 	text-decoration: underline chartreuse;
 	text-decoration-thickness: 1px;
-	text-align: center;
 }
 
 html, body {
@@ -52,7 +51,7 @@ html, body {
 		linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
 		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6));
 	background-size: 70px 120px;
-	opacity: 94%;
+	opacity: 95%;
 }
 
 .submit-btn:hover {
@@ -146,10 +145,10 @@ reg-div1, table {
 }
 
 /*============== BELOW: CODE EXCLUSIVE TO PETFEEDER MAIN PAGE =============================*/
-
 .edit-delete-btns {
 	color: magenta;
 }
+
 .logout-btn-div {
 	float: right;
 	background-color: tomato;
@@ -179,7 +178,8 @@ reg-div1, table {
 	width: 97%;
 	position: center;
 	border-style: double;
-	border-width: 10px; margin : auto;
+	border-width: 10px;
+	margin: auto;
 	border-radius: 23px;
 	margin: auto;
 }
@@ -246,21 +246,17 @@ reg-div1, table {
 .dog-house {
 	float: left;
 	padding-left: 10px;
-		
-	
 }
 
 .vintage-pup {
 	float: right;
 	padding-right: 10px;
-	
 }
 
-/*================  CSS EXCLUSIVE TO EDITDOG PAGE  ======================*/
+/*================  CSS EXCLUSIVE TO NEWDOG PAGE  ======================*/
 .newdog-div {
 	background-color: #8d2c2c;
 	width: 70%;
-	
 	margin: auto;
 	border: outset;
 	border-width: 7px;
@@ -279,16 +275,15 @@ input.newdog-div {
 	color: black;
 	border: inset;
 	border-color: #ff0000;
-	font-size: 125%;
+	font-size: 100%;
 }
 
 .new-dog-select {
 	background: #007551;
 	color: white;
-	font-size: 123%;
 	border-style: outset;
-	border-radius: 14px;
-	font-size: 120%;
+	border-radius: 10px;
+	font-size: 80%;
 }
 
 .yet-another-submit-btn {
@@ -298,16 +293,55 @@ input.newdog-div {
 	padding: 7px 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	font-size: 176%;
+	font-size: 111%;
 	border-style: outset;
 	border-radius: 25px;
 }
 
 .form-label {
-	font-size:150%;
-	
+	font-size: 150%;
 }
 
-.form-label {
-	font-size:150%;
+/*============= CSS EXCLUSIVE TO ADD-FOOD-BAG BELOW ================================= */
+.special-div {
+	background-color: #772953;
+	color: #E95420;
+	font-size: 125%;
+	border: double;
+	border-width: 20px;
+}
+
+.special-div-input {
+	background-color: black;
+	color: #05ff00;
+	font-size: large;
+}
+
+.wrangle {
+	padding-right: 137px;
+}
+
+.add-food-btn:hover {
+	background-color: #E95420;
+	color: #772953;
+}
+
+.add-food-btn {
+	background-color: #5e2750;
+	color: #E95420;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 127%;
+	border-style: inset;
+	border-radius: 10px;
+	border-color: #E95420;
+}
+
+.dish {
+	padding-top:100px;
+	padding-left:35%;
+	width:450px;
+	height:200px;
+	
 }
