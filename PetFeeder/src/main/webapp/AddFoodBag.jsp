@@ -63,11 +63,10 @@
 					<input class=add-food-btn type="submit" value="Add new food bag" />
 				</form>
 			</div>
-			<br>
-			<br>
+			<br> <br>
 		</div>
 	</body>
 </div>
 
- <img class="dish" src="./Images/dish.svg" alt="7-dog-clipart" />
+<img class="dish" src="./Images/dish.svg" alt="7-dog-clipart" />
 </html>
