@@ -13,20 +13,27 @@
 <div id=wrapper>
 	<body>
 		<header class="index-heading1">
+
 			<div>
+
 				<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
 				<div class="logout-btn-div" role="navigation">
 					<form action="<%=request.getContextPath()%>/user?action=LOGOUT"
 						method="post">
 						<input class="logout-btn" type="submit" value="Logout" />
 					</form>
+
 				</div>
+
+
 				<h1>
 					<i> PET FEEDER </i>
 				</h1>
+
 			</div>
+
 		</header>
-		
+
 		<div class="main-div" align="center">
 			<%
 			HttpSession session = request.getSession(false);
@@ -37,16 +44,17 @@
 				<%=user%>!
 			</h1>
 			<br>
-			<h2 id=main-page-message>Your pet's food will end in ${daysUntilEmpty} days.</h2><br>
-						<img class="dog-house" src="./Images/dog-house.png" alt="small-dog-clipart10" />
-									<img class="vintage-pup" src="./Images/vintage-pup.png" alt="small-dog-clipart10" />
-			
+			<h2 id=main-page-message>Your pet's food will end in
+				${daysUntilEmpty} days.</h2>
+			<br> <img class="dog-house" src="./Images/dog-house.png"
+				alt="small-dog-clipart10" /> <img class="vintage-pup"
+				src="./Images/vintage-pup.png" alt="small-dog-clipart10" />
+
 			<div class="table-enclose-div">
 				<!-- <div class="alert alert-success" *ngIf='message'>{{message}} </div> -->
 				<div class="container">
 					<h3 id=table-title-main class="text-center">
-					<br>
-						<i>List of dogs registered to <%=user%>:
+						<br> <i>List of dogs registered to <%=user%>:
 						</i>
 					</h3>
 					<hr>
@@ -68,10 +76,10 @@
 									<td><c:out value="${dog.dogType}" /></td>
 									<td style="text-align: center;"><c:out
 											value="${dog.dogDailyAmount}" /></td>
-									<td><a
+									<td><a class="edit-delete-btns"
 										href="?action=edit&id=<c:out value='${dog.id}' />
                                     	">Edit</a>
-										&nbsp;&nbsp;&nbsp;&nbsp; <a
+										&nbsp;&nbsp;&nbsp;&nbsp; <a class="edit-delete-btns"
 										href="?action=delete&id=<c:out value='${dog.id}' />">Delete</a>
 									</td>
 								</tr>
@@ -82,8 +90,7 @@
 				</div>
 				<br> <br>
 				<div class="container text-left">
-					<form
-						action="<%=request.getContextPath()%>/DogServlet?action=new"
+					<form action="<%=request.getContextPath()%>/DogServlet?action=new"
 						method="post">
 						<input class="add-dog-btn" type="submit" value="Add new dog" />
 					</form>
@@ -133,7 +140,8 @@
 				</div>
 				<hr>
 			</div>
-			<br> <br> <br><br>
+			<br> <br> <br>
+			<br>
 		</div>
 	</body>
 </div>
