@@ -1,70 +1,313 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-	
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" type="text/css"
-	href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-<title>User Register</title>
-</head>
-<div id=wrapper>
-<body>
-	<header class="index-heading1">
-		<div>
-			<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
-			<h1>
-				<i> PET FEEDER </i>
-			</h1>
+@charset "UTF-8";
 
-		</div>
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
 
-	</header>
-	<br>	<br>
-		<br>
-		<br>
+.index-heading1 {
+	background-color: tomato;
+	color: black;
+	font-family: 'Ubuntu';
+	text-decoration: underline;
+	font-size: 227%;
+	padding-left: 55px;
+	text-decoration-thickness: 7px;
+	border-radius: 13px;
+}
+
+.index-welcome-login {
+	background-color: #0f004f;
+	color: chartreuse;
+	font-family: 'Ubuntu';
+	height: 100%;
+}
+
+.inner-login-div {
+	background-color: #001e34;
+	height: 39%;
+	width: 57%;
+	border-style: double;
+	padding-bottom: 50px;
+}
+
+#red-med-text {
+	text-align: center;
+	color: red;
+	text-decoration: underline chartreuse;
+	text-decoration-thickness: 1px;
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+	background-color: rgba(54, 202, 197, 0.8);
+	background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1),
+		rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px),
+		repeating-linear-gradient(60deg, rgba(255, 255, 255, .1),
+		rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px),
+		linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
+		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)),
+		linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
+		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6));
+	background-size: 70px 120px;
+	opacity: 94%;
+}
+
+.submit-btn:hover {
+	background-color: chartreuse;
+	color: #001539;
+}
+
+.dog1 {
+	float: right;
+	padding-top: 10px;
+	padding-right: 100px;
+}
+
+.dog5 {
+	float: right;
+	padding-top: 50px;
+	padding-bottom: 230px;
+	padding-left: 20px;
+	padding-right: 30px;
+}
+
+.dog9 {
+	float: left;
+	padding-top: 320px;
+	padding-left: 30px;
+}
+
+.submit-btn {
+	background-color: #00a09d;
+	border: none;
+	color: #1f0078;
+	padding: 7px 16px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 200%;
+	border-radius: 15px;
+	border-radius: 10px;
+}
+
+.another-submit-btn:hover {
+	background-color: yellow;
+	color: black;
+}
+
+/*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP =========================================================                  */
+.table1 {
+	border: 1px, solid;
+	color: black;
+	background-color: #00ffff;
+	border-radius: 10px;
+}
+
+.reg-div1 {
+	background-color: #2ec27e;
+	margin: auto;
+	width: 50%;
+	border: 6px solid green;
+	padding-bottom: 17px;
+	border-style: inset;
+	border-radius: 10px;
+}
+
+reg-div1, table {
+	border-style: outset;
+	border-radius: 10px;
+}
+
+.another-submit-btn {
+	background-color: #bf3f3f;
+	border: none;
+	color: #f1ff00;
+	padding: 7px 16px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 200%;
+	border-style: inset;
+	border-radius: 10px;
+}
+
+.tomato-input {
+	background-color: tomato;
+	color: black;
+	border-radius: 10px;
+}
+
+.another-submit-btn:hover {
+	background-color: yellow;
+	color: black;
+}
+
+/*============== BELOW: CODE EXCLUSIVE TO PETFEEDER MAIN PAGE =============================*/
+.edit-delete-btns {
+	color: magenta;
+}
+
+.logout-btn-div {
+	float: right;
+	background-color: tomato;
+	padding-right: 111px;
+	padding-top: 15px;
+}
+
+.logout-btn {
+	background-color: #00056e;
+	color: #f6d32d;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 90%;
+	border-style: inset;
+	border-radius: 10px;
+}
+
+.logout-btn:hover {
+	background-color: chartreuse;
+	color: #ff0000;
+}
+
+.main-div {
+	background-color: #00c832;
+	height: 77%;
+	width: 97%;
+	position: center;
+	border-style: double;
+	border-width: 10px; margin : auto;
+	border-radius: 23px;
+	margin: auto;
+}
+
+#main-page-message {
+	color: #cc0000;
+	font-size: 300%;
+}
+
+#main-page-heading {
+	color: black;
+	background-color: yellow;
+	width: 60%;
+	border-radius: 25px;
+}
+
+.table-enclose-div {
+	background-color: navy;
+	border-radius: 20px;
+	width: 49%;
+	color: yellow;
+	border-width: 10px;
+}
+
+.add-dog-btn {
+	background-color: #00056e;
+	color: #f6d32d;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 127%;
+	border-style: inset;
+	border-radius: 10px;
+}
+
+.add-dog-btn:hover {
+	background-color: chartreuse;
+	color: black;
+}
+
+.add-bag-btn {
+	background-color: #00056e;
+	color: #f6d32d;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 127%;
+	border-style: inset;
+	border-radius: 10px;
+}
+
+.add-bag-btn:hover {
+	background-color: #ed333b;
+	color: black;
+}
+
+#table-title-main {
+	color: magenta;
+	font-size: 150%;
+	text-decoration: underline;
+	text-decoration-color: yellow;
+}
+
+.dog-house {
+	float: left;
+	padding-left: 10px;
+		
 	
-<div class="reg-div1" align="center">
-  <h1>Pet Feeder Registration Form</h1>
-  <form action="<%= request.getContextPath() %>/register" method="post">
-   <table class="table1" style="with: 80%">
-    <tr>
-     <td>First Name</td>
-     <td><input class="tomato-input" type="text" name="firstName" required="required"/></td>
-    </tr>
-    <tr>
-     <td>Last Name</td>
-     <td><input class="tomato-input" type="text" name="lastName" required="required"/></td>
-    </tr>
-    <tr>
-     <td>Email</td>
-     <td><input class="tomato-input" type="text" name="email" required="required"/></td>
-    </tr>
-    <tr>
-     <td>Username</td>
-     <td><input class="tomato-input" type="text" name="username" required="required" /></td>
-    </tr>
-    <tr>
-     <td>Password</td>
-     <td><input class="tomato-input" type="password" name="password" required="required"/></td>
-    </tr>
-    
-   </table>
-   <br><br><br>
-   <input class="another-submit-btn" type="submit" value="Submit" />
-   <br><br>
-  </form>
-  <p><i>If you don't have an account, please make one now with this form. </i>  <p>
-  <p>PetFeeder will send you email notifications as well as display in-app information about your dog's food quantity. <p>
- </div>
- 
- <img class="dog2" src="./Images/dog7.png" alt="7-dog-clipart" />
- 
- <img class="dog1" src="./Images/dog-6.png" alt="6-dog-clipart" />
- 
- 
-</body>
-</div>
-</html>
+}
+
+.vintage-pup {
+	float: right;
+	padding-right: 10px;
+	
+}
+
+/*================  CSS EXCLUSIVE TO EDITDOG PAGE  ======================*/
+.newdog-div {
+	background-color: #8d2c2c;
+	width: 70%;
+	
+	margin: auto;
+	border: outset;
+	border-width: 7px;
+	border-color: #1a5fb4;
+	color: black;
+}
+
+h1.newdog-div {
+	color: #f1ff00;
+	border: none;
+}
+
+input.newdog-div {
+	background-color: tomato;
+	width: 20%;
+	color: black;
+	border: inset;
+	border-color: #ff0000;
+	font-size: 125%;
+}
+
+.new-dog-select {
+	background: #007551;
+	color: white;
+	font-size: 123%;
+	border-style: outset;
+	border-radius: 14px;
+	font-size: 120%;
+}
+
+.yet-another-submit-btn {
+	background-color: #bf3f3f;
+	border: none;
+	color: #f1ff00;
+	padding: 7px 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 176%;
+	border-style: outset;
+	border-radius: 25px;
+}
+
+.form-label {
+	
+	
+	font-size:150%;
+	
+}
+
+
