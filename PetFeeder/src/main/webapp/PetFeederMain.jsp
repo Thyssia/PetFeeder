@@ -9,9 +9,11 @@
 <link rel="stylesheet" type="text/css"
 	href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <title>User Register</title>
+<link rel="icon" type="image/x-icon" href="./Images/doggo.png">
 </head>
 <div id=wrapper>
-	<body>
+	<body
+		style="height: 100%; background-color: rgba(54, 202, 197, 0.8); background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px), linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(0, 0, 255, .6)); background-size: 70px 120px; opacity: 95%">
 		<header class="index-heading1">
 
 			<div>
@@ -140,8 +142,7 @@
 				</div>
 				<hr>
 			</div>
-			<br> <br> <br>
-			<br>
+			<br> <br> <br> <br>
 		</div>
 	</body>
 </div>
