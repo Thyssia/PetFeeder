@@ -98,7 +98,7 @@ html, body {
 	color: black;
 }
 
-/*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP =========================================================                  */
+/*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP ================================================*/
 .table1 {
 	border: 1px, solid;
 	color: black;
@@ -146,10 +146,10 @@ reg-div1, table {
 }
 
 /*============== BELOW: CODE EXCLUSIVE TO PETFEEDER MAIN PAGE =============================*/
+
 .edit-delete-btns {
 	color: magenta;
 }
-
 .logout-btn-div {
 	float: right;
 	background-color: tomato;
@@ -304,10 +304,10 @@ input.newdog-div {
 }
 
 .form-label {
-	
-	
 	font-size:150%;
 	
 }
 
-
+.form-label {
+	font-size:150%;
+}
