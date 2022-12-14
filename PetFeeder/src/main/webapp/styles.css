@@ -88,7 +88,6 @@ html, body {
 	margin: 4px 2px;
 	cursor: pointer;
 	font-size: 200%;
-	border-radius: 15px;
 	border-radius: 10px;
 }
 
@@ -136,7 +135,7 @@ reg-div1, table {
 .tomato-input {
 	background-color: tomato;
 	color: black;
-	border-radius: 10px;
+	border-radius: 9px;
 }
 
 .another-submit-btn:hover {
@@ -153,7 +152,7 @@ reg-div1, table {
 	float: right;
 	background-color: tomato;
 	padding-right: 111px;
-	padding-top: 15px;
+	padding-top: 13px;
 }
 
 .logout-btn {
@@ -165,6 +164,7 @@ reg-div1, table {
 	font-size: 90%;
 	border-style: inset;
 	border-radius: 10px;
+	padding: 2px;
 }
 
 .logout-btn:hover {
@@ -213,6 +213,7 @@ reg-div1, table {
 	font-size: 127%;
 	border-style: inset;
 	border-radius: 10px;
+	padding: 11px;
 }
 
 .add-dog-btn:hover {
@@ -229,6 +230,7 @@ reg-div1, table {
 	font-size: 127%;
 	border-style: inset;
 	border-radius: 10px;
+	padding: 11px;
 }
 
 .add-bag-btn:hover {
@@ -290,7 +292,7 @@ input.newdog-div {
 	background-color: #bf3f3f;
 	border: none;
 	color: #f1ff00;
-	padding: 7px 16px;
+	padding: 5px 13px;
 	margin: 4px 2px;
 	cursor: pointer;
 	font-size: 111%;
@@ -315,6 +317,7 @@ input.newdog-div {
 	background-color: black;
 	color: #05ff00;
 	font-size: large;
+	padding: 1px;
 }
 
 .wrangle {
@@ -327,21 +330,21 @@ input.newdog-div {
 }
 
 .add-food-btn {
-	background-color: #5e2750;
+	background-color: #31003f;
 	color: #E95420;
 	text-decoration: none;
 	margin: 4px 2px;
 	cursor: pointer;
 	font-size: 127%;
 	border-style: inset;
-	border-radius: 10px;
+	border-radius: 9px;
 	border-color: #E95420;
+	padding: 11px;
 }
 
 .dish {
-	padding-top:100px;
-	padding-left:35%;
-	width:450px;
-	height:200px;
-	
+	padding-top: 100px;
+	padding-left: 35%;
+	width: 450px;
+	height: 200px;
 }
