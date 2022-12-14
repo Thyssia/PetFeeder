@@ -99,9 +99,11 @@ html, body {
 /*================== THIS MARKS BELOW THE CSS EXCLUSIVE TO USERREGISTER.JSP ================================================*/
 .table1 {
 	border: 1px, solid;
+	border-color: #96bf3f;
 	color: black;
 	background-color: #00ffff;
 	border-radius: 10px;
+	padding: 27px;
 }
 
 .reg-div1 {
@@ -136,6 +138,14 @@ reg-div1, table {
 	background-color: tomato;
 	color: black;
 	border-radius: 9px;
+	font-size: 100%;
+}
+
+.tomato-input:hover {
+	background-color: #e01b24;
+	color: black;
+	border-radius: 9px;
+	font-size: 113%;
 }
 
 .another-submit-btn:hover {
@@ -257,13 +267,13 @@ reg-div1, table {
 
 /*================  CSS EXCLUSIVE TO NEWDOG PAGE  ======================*/
 .newdog-div {
-	background-color: #8d2c2c;
-	width: 70%;
+	background-color: #8d2c2c; width : 70%;
 	margin: auto;
 	border: outset;
 	border-width: 7px;
 	border-color: #1a5fb4;
 	color: black;
+	width: 70%;
 }
 
 h1.newdog-div {
@@ -285,7 +295,7 @@ input.newdog-div {
 	color: white;
 	border-style: outset;
 	border-radius: 10px;
-	font-size: 80%;
+	font-size: 100%;
 }
 
 .yet-another-submit-btn {
@@ -311,6 +321,8 @@ input.newdog-div {
 	font-size: 125%;
 	border: double;
 	border-width: 20px;
+	height: 100%;
+	width: 100%;
 }
 
 .special-div-input {
@@ -347,4 +359,49 @@ input.newdog-div {
 	padding-left: 35%;
 	width: 450px;
 	height: 200px;
+}
+
+/*======= CSS EXCLUSIVE TO EDITDOG.JSP =============*/
+.bg-div {
+	height: 100%;
+	background-color: navy;
+	border-style: double;
+	border-width: 17px;
+	border-color: yellow;
+	padding: 17px;
+	width: 77%;
+	margin: auto;
+	border-radius: 19px;
+}
+
+.yellow-input {
+	background-color: #f9ff00;
+	color: #000009;
+	border-radius: 9px;
+	font-size: 101%;
+}
+
+.edit-dog-select {
+	background: #813d9c;
+	color: white;
+	border-style: outset;
+	border-radius: 10px;
+	font-size: 100%;
+}
+
+.edit-dog-btn {
+	background-color: #63452c;
+	color: magenta;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-size: 127%;
+	border-style: inset;
+	border-radius: 10px;
+	padding: 11px;
+}
+
+.edit-dog-btn:hover {
+	background-color: magenta;
+	color: black;
 }
