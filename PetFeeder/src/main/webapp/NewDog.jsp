@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" type="text/css"
 	href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-<title>User Register</title>
+<title>Add dog</title>
 </head>
 <div id=wrapper>
 	<body>
