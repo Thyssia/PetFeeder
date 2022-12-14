@@ -9,9 +9,11 @@
 <link rel="stylesheet" type="text/css"
 	href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <title>Edit Dog</title>
+<link rel="icon" type="image/x-icon" href="./Images/doggo.png">
 </head>
 <div id=wrapper>
-	<body>
+	<body
+		style="height: 100%; background-color: rgba(54, 202, 197, 0.8); background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px), linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 0, 139, .6) 75%, rgba(255, 255, 0, .6)); background-size: 70px 120px; opacity: 95%">
 		<header class="index-heading1">
 
 			<div>
@@ -33,44 +35,63 @@
 			</div>
 
 		</header>
-    <br>
-    <div class="container col-md-5">
-    	<div class="card">
-    		<div class="card-body">
-    			<form action="<%= request.getContextPath() %>/DogServlet?action=update" method="post">
-                <caption>
-                	<h2>                	
-                    Edit Dog
-                	</h2>
-                </caption>
-                <c:if test="${dog != null}">
-                	<input type="hidden" name="id" value="<c:out value='${dog.id}' />" />
-                </c:if>
+		<br>
 
-                <fieldset class="form-group">
-                	<label>Dog Name</label>
-                	<input type="text" value="<c:out value='${dog.dogName}' />
-                	" class="form-control" name="dogName" required="required">
-                </fieldset>
+		<div class=main-div>
+			<br> <br> <br> <br> <br> <br> <br>
+			<br>
+			<div class=bg-div class="container col-md-5">
+				<br> <br> <br>
+				<div class=reg-div1 class="card">
+					<div class="card-body">
+						<form style="color: #000007"
+							action="<%=request.getContextPath()%>/DogServlet?action=update"
+							method="post">
+							<caption>
+								<h2>&nbsp;&nbsp;&nbsp; Edit Dog:</h2>
+							</caption>
+							<c:if test="${dog != null}">
+								<input type="hidden" name="id"
+									value="<c:out value='${dog.id}' />" />
+							</c:if>
 
-                <fieldset class="form-group">
-                	<label>Current Dog Type</label>
-                	<input type="text" value="<c:out value='${dog.dogType}' />
-                	" class="form-control" readonly>
-                	
-                	<label>New Dog Type</label>
-       					<select name="dogType" >
-					        <option value="small">Small</option>
-					        <option value="medium">Medium</option>
-					        <option value="large">Large</option>
-					    </select>
-                </fieldset>
+							<fieldset class="form-group">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Dog
+									Name</label> <input class=yellow-input type="text"
+									value="<c:out value='${dog.dogName}' />
+                	"
+									class="form-control" name="dogName" required="required">
+							</fieldset>
 
-				<button type="submit" class="btn btn-success">Save</button>
-               </form>
+							<fieldset class="form-group">
+								<br> <label>Current Dog Type</label> <input
+									class=yellow-input type="text"
+									value="<c:out value='${dog.dogType}' />
+                	"
+									class="form-control" readonly>
+
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>New Dog Type</label> <select
+									class=edit-dog-select name="dogType">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select><br>
+							</fieldset>
+							<br> <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<button class=edit-dog-btn type="submit" class="btn btn-success">Save!</button>
+						</form>
+
+					</div>
+					<br>
+				</div>
+				<br> <br> <br>
 			</div>
+			<br> <br> <br> <br> <br> <br> <br>
+			<br>
 		</div>
-	</div>
-</body>
+	</body>
 </div>
+
 </html>
