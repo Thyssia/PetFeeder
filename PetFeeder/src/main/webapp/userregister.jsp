@@ -16,9 +16,14 @@
 	<body
 		style="height: 100%; background-color: rgba(54, 202, 197, 0.8); background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px), linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 0, 139, .6) 75%, rgba(255, 0, 0, .6)); background-size: 70px 120px; opacity: 95%">
 		<div class=index-welcome-login></div>
+
 		<header class="index-heading1">
+
+			<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
+
 			<div>
-				<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
+
+				<img class="other-dog" src="./Images/dog7.png" alt="7-dog-clipart" />
 				<h1>
 					<i> PET FEEDER </i>
 				</h1>
@@ -26,11 +31,20 @@
 			</div>
 
 		</header>
-		<br>
-		<br>
-		<br>
-		<br>
 
+
+
+		<img class=dog-pic1 style="" src="./Images/dog-6.png"
+			alt="6-dog-clipart" />
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		<div class="reg-div1" align="center">
 			<h1>Pet Feeder Registration Form</h1>
 			<form action="<%=request.getContextPath()%>/register" method="post">
@@ -62,11 +76,8 @@
 					</tr>
 
 				</table>
-				<br>
-				<br>
-				<br> <input class="another-submit-btn" type="submit"
-					value="Submit" /> <br>
-				<br>
+				<br> <br> <br> <input class="another-submit-btn"
+					type="submit" value="Submit" /> <br> <br>
 			</form>
 			<p>
 				<i>If you don't have an account, please make one now with this
@@ -76,10 +87,6 @@
 				in-app information about your dog's food quantity.
 			<p>
 		</div>
-
-		<img class="dog2" src="./Images/dog7.png" alt="7-dog-clipart" />
-
-		<img class="dog1" src="./Images/dog-6.png" alt="6-dog-clipart" />
 </div>
 </body>
 </div>
