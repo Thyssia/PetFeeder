@@ -13,7 +13,12 @@
 </head>
 <div id=wrapper>
 	<body
-		style="height: 100%; background-color: rgba(54, 202, 197, 0.8); background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px), linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(119, 41, 83, .6) 75%, rgba(119, 41, 83, .6)); background-size: 70px 120px; opacity: 95%">
+		style="height: 100%; background-color: rgba(54, 202, 197, 0.8); 
+		background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 3px, 
+		transparent 3px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px,
+		transparent 3px, transparent 60px), linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, 
+		rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
+		transparent 75%, rgba(119, 41, 83, .6) 75%, rgba(119, 41, 83, .6)); background-size: 70px 120px; opacity: 95%">
 		<header class="index-heading1">
 
 			<div>
@@ -47,23 +52,25 @@
 				<%=user%>:
 			</h1>
 			<div class=wrangle>
-				<form action="<%=request.getContextPath()%>/FoodBagServlet"
-					method="post">
-
-					&nbsp; &nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Food brand <input
-						class=special-div-input type="text" name="food_bag_brand" /> <br>
-					<br> &nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Food bag size (kg)
+				<form action="<%=request.getContextPath()%>/FoodBagServlet" method="post">
+					&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					Food brand <input class=special-div-input type="text" name="food_bag_brand" /> 
+					<br>
+					<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Food bag size (kg)
 					<input class=special-div-input type="text" name="food_bag_size" />
-					<br> <br> Date bag opened (yyyy-mm-dd)<input
-						class=special-div-input type="text" name="day_opened" /> <br>
-					<br> <br> <input type="hidden" name="owner"
-						value="<%=user%>"> <input class=add-food-btn type="submit"
-						value="Add new food bag" />
+					<br> 
+					<br> 
+					Date bag opened (yyyy-mm-dd)
+					<input class=special-div-input type="text" name="day_opened" /> 
+					<br>
+					<br>
+					<br> 
+					<input type="hidden" name="owner" value="<%=user%>"> 
+					<input class=add-food-btn type="submit" value="Add new food bag" />
 				</form>
 			</div>
 			<img style="float: left; padding: 27px" src="./Images/doggo.png"
@@ -79,8 +86,6 @@
 	</body>
 	<br>
 	<br>
-
-
 </div>
 
 </html>

@@ -13,30 +13,28 @@
 </head>
 <div id=wrapper>
 	<body
-		style="height: 100%; background-color: rgba(54, 202, 197, 0.8); background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 3px, transparent 3px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px), linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%, transparent 75%, rgba(139, 0, 139, .6) 75%, rgba(255, 255, 0, .6)); background-size: 70px 120px; opacity: 95%">
+		style="height: 100%; background-color: rgba(54, 202, 197, 0.8); 
+		background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 3px, 
+		transparent 3px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), 
+		rgba(255, 255, 255, .1) 1px, transparent 3px, transparent 60px), linear-gradient(60deg, rgba(139, 139, 139, .6) 25%, transparent 25%, 
+		transparent 75%, rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%,
+		transparent 25%, transparent 75%, rgba(139, 0, 139, .6) 75%, rgba(255, 255, 0, .6)); 
+		background-size: 70px 120px; opacity: 95%">
 		<header class="index-heading1">
-
 			<div>
-
 				<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
 				<div class="logout-btn-div" role="navigation">
 					<form action="<%=request.getContextPath()%>/user?action=LOGOUT"
 						method="post">
 						<input class="logout-btn" type="submit" value="Logout" />
 					</form>
-
 				</div>
-
-
 				<h1>
 					<i> PET FEEDER </i>
 				</h1>
-
 			</div>
-
 		</header>
 		<br>
-
 		<div class=main-div>
 			<br> <br> <br> <br> <br> <br> <br>
 			<br>
@@ -65,13 +63,14 @@
 							</fieldset>
 
 							<fieldset class="form-group">
-								<br> <label>Current Dog Type</label> <input
-									class=yellow-input type="text"
-									value="<c:out value='${dog.dogType}' />
-                	"
+								<br>
+								<label>Current Dog Type</label> 
+								<input class=yellow-input type="text" value="<c:out value='${dog.dogType}' />                	"
 									class="form-control" readonly>
-
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>New Dog Type</label> <select
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<br>
+									<br>
+									<label>New Dog Type</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select
 									class=edit-dog-select name="dogType">
 									<option value="small">Small</option>
 									<option value="medium">Medium</option>
