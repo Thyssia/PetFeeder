@@ -15,6 +15,7 @@ public class FoodBagBean implements Serializable {
 	private int id;
 	
 	public FoodBagBean() {};
+	
     public FoodBagBean(int id, String fbBrand, int fbSize, int sCups, Date dayOpened, String Owner) {
     	this.id = id;
     	this.fbBrand = fbBrand;

@@ -7,10 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import ca.algonquin.petfeeder.beans.FoodBagBean;
 import ca.algonquin.petfeeder.utils.DBConnection;
-
 
 public class FoodBagDao {
 	private static final String SELECT_ALL_FOOD = "select * from foodbag where owner = ?; ";
@@ -74,6 +72,7 @@ public class FoodBagDao {
             }
             return fb;
     }
+	
     private void printSQLException(SQLException ex) {
         for (Throwable e: ex) {
             if (e instanceof SQLException) {

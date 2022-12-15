@@ -3,10 +3,8 @@ package ca.algonquin.petfeeder.utils;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
-
 import ca.algonquin.petfeeder.beans.UserBean;
 import ca.algonquin.petfeeder.dao.UserDao;
-
 import javax.activation.*;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -14,8 +12,7 @@ import javax.mail.Transport;
 public class SendEmail {
 
 	private static SendEmail instance = null;
-
-	String sender = "notification@petfeeder.com";
+		String sender = "notification@petfeeder.com";
 	String host = "localhost";
 	Properties properties = System.getProperties();
 	UserBean userBean;
@@ -31,7 +28,6 @@ public class SendEmail {
 
 	// method to generate/send the email
 	public void sendEmail(String user, int bob) throws ClassNotFoundException {
-		
 		this.userBean = userdao.getUserInfo(user);	
 		String recipient = userBean.getEmail();
 		String sender = "notification@petfeeder.com";
@@ -41,9 +37,7 @@ public class SendEmail {
 		properties.setProperty("mail.smtp.host", host);
 		// creating session object to get properties
 		Session session = Session.getDefaultInstance(properties);
-		
 		try {
-
 			MimeMessage message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(sender));
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));

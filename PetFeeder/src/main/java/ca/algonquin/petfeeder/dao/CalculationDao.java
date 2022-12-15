@@ -24,6 +24,7 @@ public class CalculationDao {
 	public int getDaysLeft() {
 		return this.daysLeft;
 	}
+	
 	public void attach(ObserverDaysLeft observer){
 	      this.observer = observer;		
 	}
@@ -78,8 +79,7 @@ public class CalculationDao {
         	daysUntilEmpty = Integer.toString(daysLeft);
         	System.out.println("Calling notifier update now: ");
         	observer.update();
-        
-           
+                   
         if (((totalCupsSize/dailyDogsUse) - daysSinceOpened) < 0) {
         //	System.out.println("Less than zero Math: (" + totalCupsSize + "/"+dailyDogsUse +") - " +daysSinceOpened+")");
         //	System.out.println("today " + today + "bag opened + " + foodOpenedDate);

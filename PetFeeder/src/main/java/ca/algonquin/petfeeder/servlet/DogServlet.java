@@ -3,13 +3,11 @@ package ca.algonquin.petfeeder.servlet;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import ca.algonquin.petfeeder.beans.DogBean;
 import ca.algonquin.petfeeder.beans.FoodBagBean;
 import ca.algonquin.petfeeder.dao.CalculationDao;
@@ -42,7 +40,7 @@ public class DogServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     	throws ServletException, IOException {
-   	
+    	  	
     	String action = "goLogin";
         
    	    if (request.getSession().getAttribute("username") != null) {
@@ -82,6 +80,7 @@ public class DogServlet extends HttpServlet {
 				e.printStackTrace();
 			}
      }
+    
     private int getDogDailyIntake(String dogType) {
     	
     	if (dogType.equalsIgnoreCase("small")) return SmallDogIntake;
@@ -151,7 +150,7 @@ public class DogServlet extends HttpServlet {
     private void goLogin(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
 
-                response.sendRedirect("login.jsp");
+           response.sendRedirect("login.jsp");
         	}
 }
  

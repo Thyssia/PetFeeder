@@ -20,27 +20,18 @@
 		rgba(139, 139, 139, .6) 75%, rgba(139, 139, 139, .6)), linear-gradient(120deg, rgba(139, 139, 139, .6) 25%, transparent 25%,
 		transparent 75%, rgba(119, 41, 83, .6) 75%, rgba(119, 41, 83, .6)); background-size: 70px 120px; opacity: 95%">
 		<header class="index-heading1">
-
 			<div>
-
 				<img class="dog1" src="./Images/dog1.png" alt="small-dog-clipart1" />
 				<div class="logout-btn-div" role="navigation">
-					<form action="<%=request.getContextPath()%>/user?action=LOGOUT"
-						method="post">
+					<form action="<%=request.getContextPath()%>/user?action=LOGOUT" method="post">
 						<input class="logout-btn" type="submit" value="Logout" />
 					</form>
-
 				</div>
-
-
 				<h1>
 					<i> PET FEEDER </i>
 				</h1>
-
 			</div>
-
 		</header>
-
 		<div class=special-div align="center">
 			<br>
 			<%
@@ -55,11 +46,12 @@
 				<form action="<%=request.getContextPath()%>/FoodBagServlet" method="post">
 					&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-					Food brand <input class=special-div-input type="text" name="food_bag_brand" /> 
+					Food brand 
+					<input class=special-div-input type="text" name="food_bag_brand" /> 
 					<br>
 					<br> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					Food bag size (kg)
 					<input class=special-div-input type="text" name="food_bag_size" />
 					<br> 
@@ -70,12 +62,15 @@
 					<br>
 					<br> 
 					<input type="hidden" name="owner" value="<%=user%>"> 
-					<input class=add-food-btn type="submit" value="Add new food bag" />
+					<input class=add-food-btn type="submit" style="margin-left: 10%" value="Add new food bag" />
+					<br>
+					<br>
+					<br>
 				</form>
 			</div>
-			<img style="float: left; padding: 27px" src="./Images/doggo.png"
-				alt="7-dog-clipart" /> <img style="float: right; padding: 27px"
-				class=dish src="./Images/dish.svg" alt="7-dog-clipart" /> <br>
+			<img style="float: left; padding: 27px" src="./Images/doggo.png" alt="7-dog-clipart" /> 
+			<img style="float: right; padding: 27px" class=dish src="./Images/dish.svg" alt="7-dog-clipart" /> 
+			<br>
 			<br>
 			<br> <br>
 			<br> <br>

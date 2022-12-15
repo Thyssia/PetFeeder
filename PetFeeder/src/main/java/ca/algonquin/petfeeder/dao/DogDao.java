@@ -6,10 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import ca.algonquin.petfeeder.beans.DogBean;
 import ca.algonquin.petfeeder.utils.DBConnection;
-
 
 public class DogDao {
 	private Connection connection;	
@@ -50,10 +48,10 @@ public class DogDao {
         	PreparedStatement preparedStatement = connection.prepareStatement(SELECT_DOG_BY_ID);
             preparedStatement.setInt(1, id);
             System.out.println(preparedStatement);
-            // Step 3: Execute the query or update query
+            // Step 2: Execute the query or update query
             ResultSet rs = preparedStatement.executeQuery();
 
-            // Step 4: Process the ResultSet object.
+            // Step 3: Process the ResultSet object.
             while (rs.next()) {
             	String DogName = rs.getString("dog_name");
                 String DogType = rs.getString("dog_type");
@@ -120,7 +118,6 @@ public class DogDao {
             printSQLException(e);
         }
         return rowUpdated;
-        
     }
 
     private void printSQLException(SQLException ex) {
