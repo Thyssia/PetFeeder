@@ -153,6 +153,25 @@ reg-div1, table {
 	color: black;
 }
 
+.dog-pic1 {
+	position: absolute;
+	width: 250px;
+	height: 200px;
+	padding-left: 300px;
+	z-index: 10;
+	position: absolute;
+}
+
+.other-dog {
+	float: left;
+	width: 250px;
+	height: 250px;
+	padding-top: 400px;
+	z-index: 10;
+	top: 0px;
+	right: 0px;
+}
+
 /*============== BELOW: CODE EXCLUSIVE TO PETFEEDER MAIN PAGE =============================*/
 .edit-delete-btns {
 	color: magenta;
@@ -267,7 +286,8 @@ reg-div1, table {
 
 /*================  CSS EXCLUSIVE TO NEWDOG PAGE  ======================*/
 .newdog-div {
-	background-color: #8d2c2c; width : 70%;
+	background-color: #8d2c2c;
+	width: 70%;
 	margin: auto;
 	border: outset;
 	border-width: 7px;
