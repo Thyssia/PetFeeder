@@ -55,7 +55,7 @@
 						<thead>
 							<tr>
 								<th>&nbsp;Dog Name&nbsp;</th>
-								<th>&nbsp;Dog Type&nbsp;</th>
+								<th>&nbsp;Dog Size&nbsp;</th>
 								<th>&nbsp;Dog Daily Intake (cups)&nbsp;</th>
 								<th>&nbsp;Actions&nbsp;</th>
 							</tr>
